@@ -30,7 +30,7 @@
                   <a class="nav-link" href="colaborador" :active="request()->routeIs('colaborador')">Colaboradores</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Anuncios</a>
+                  <a class="nav-link" href="contact.html">Anúncios</a>
                 </li>
               </ul>
             </div>
