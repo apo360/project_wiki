@@ -24,7 +24,7 @@
                   <a class="nav-link" href="academico" :active="request()->routeIs('academico')">Academicos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="teacher.html">Repositório</a>
+                  <a class="nav-link" href="repositorio" :active = "request()->routeIs('repositorio')">Repositório</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="colaborador" :active="request()->routeIs('colaborador')">Colaboradores</a>

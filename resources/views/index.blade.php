@@ -25,7 +25,8 @@
                       Plataforma Academica e Cientifica de Angola
                     </h1>
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Somos a porta de acesso ao conhecimento e a solução 
+                      das suas pesquisas académicas.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -50,14 +51,14 @@
                       A sua Orientação Academica
                     </h1>
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    Temos para si um mundo de soluções para as suas dificuldades académicas desde trabalhos ciêntíficos  aos diversos apoios académicos.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Contact Us
+                        Contacto-nos
                       </a>
                       <a href="" class="btn2">
-                        About Us
+                        Sobre Nós
                       </a>
                     </div>
                   </div>
@@ -71,11 +72,11 @@
                 <div class="col-md-7 mx-auto">
                   <div class="detail-box">
                     <h1>
-                      Welcome To <br>
-                      Natone College
+                    Serviço de Apoio  <br>
+                      ao estudante
                     </h1>
                     <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                     Aqui encontrará um  Professor ou Especialista a nível da difucldade  dos seus trabalhos Académicos e poderá  ter apoio com um Professor ou Especialista em tempo real..
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -110,15 +111,13 @@
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/teste.png" alt="">
+            <img src="images/teste2.png" alt="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>
-                Quem Somos
-              </h2>
+              <h2>Quem Somos !!!</h2>
             </div>
             <p>
               Pequena introdução da startup. E o link que abre a pagina que indica todo o projecto actual e futuros
