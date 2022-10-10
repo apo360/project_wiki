@@ -80,7 +80,7 @@ body {
 }
 
 .header_section {
-  backund-color: #f8f8ff ;
+  backund-color: rgb(231, 231, 157) ;
 }
 
 .header_section .container-fluid {
@@ -905,4 +905,52 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+ /* Buttom Login and Register*/
+
+ .header__nav__link--cta {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  min-width: 10.9em;
+  background-color: #3e868d;
+  font-weight: 700;
+  box-shadow: rgba(0 0 0 .2) 0 .3em .7em 0;
+  padding: 1.4em 1.5em;
+  border-radius: 2.5em;
+}
+
+.header__nav__link:hover{
+  background-color: #40dbea;
+  text-decoration-color: #be2623;
+}
+
+
+.header__nav__link {
+  margin-left: 1.363em;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+
+.container_logo{
+
+  width: 75px;
+
+  height: 75px;
+
+  background-color: white;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 6px rgba(0, 0, 0, 0.19);
+
+  margin-top: 10px;
+
+  margin-left: 15px;
+
+  border-radius: 50%;
+
+}
+
 /*# sourceMappingURL=style.css.map */
