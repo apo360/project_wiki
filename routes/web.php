@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('users/{user?}', [\App\Http\Controllers\UserController::class, 'ShowUser']);
-
 Route::get('/', function () {
     return view('index');
 });
@@ -33,7 +31,7 @@ Route::get('/colaborador', function () {
 
 Route::get('/repositorio', function () {
     return view('repositorio.repositorio');
-});
+})->name('repositorio');
 
 
 
