@@ -3,7 +3,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   overflow-x: hidden;
 }
 
@@ -79,10 +79,6 @@ body {
           box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.15);
 }
 
-.header_section {
-  backund-color: rgb(231, 231, 157) ;
-}
-
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
@@ -99,11 +95,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-li:hover {
-border-bottom: 2px #be2623 solid;
-color: cyan;
 }
 
 a,
@@ -241,7 +232,7 @@ a:focus {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
   z-index: -1;
   display: -webkit-box;
@@ -936,21 +927,55 @@ a:focus {
 
 
 .container_logo{
-
   width: 75px;
-
-  height: 75px;
-
   background-color: white;
-
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 6px rgba(0, 0, 0, 0.19);
+}
 
-  margin-top: 10px;
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
 
-  margin-left: 15px;
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 55px;
+  transform: scale(1.5);
+
+}
+
+
+.label .ball {
+  background-color: #fff;
   border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
 
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: indigo;
+}
+
+.fa-sun {
+  color: #f39c12;
 }
 
 /*# sourceMappingURL=style.css.map */

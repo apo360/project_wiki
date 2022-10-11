@@ -63,6 +63,19 @@ body {
   background-color: #fff;
 }
 
+body.dark {
+  background-color: #292c35;
+  color: #fff;
+}
+
+
+body.dark .navbar-nav .nav-link{
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
