@@ -7,24 +7,14 @@
     <div class = "hero_area">
 
        <!-- header section strats -->
-
-
-
        @include('layouts.menu_principal')
-
-
-
         <!-- end header section -->
-
-        
 
         <!--  -->
 
         <div class = "row">
 
             <div class="col-md-3">
-
-
 
             logot
 
@@ -49,18 +39,6 @@
                             <li class="nav-item">
 
                                 <a class="nav-link" href="" :active="">{{ __('Serviços') }}</a>
-
-                            </li>
-
-                            <li class="nav-item">
-
-                                <a class="nav-link" href="" :active="">{{ __('Livraria') }}</a>
-
-                            </li>
-
-                            <li class="nav-item">
-
-                                <a class="nav-link" href="" :active="">{{ __('Contatos') }}</a>
 
                             </li>
 

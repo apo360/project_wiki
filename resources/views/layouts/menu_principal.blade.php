@@ -20,15 +20,16 @@
 
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="principal" :active="request()->routeIs('principal')">Início </a>
+                  <a class="nav-link" href="principal" :active="request()->routeIs('principal')"> <i class = "fas fa-home"></i> Home </a>
                 </li>
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Academicos</a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item" href="#">Inscrição Universitária</li>
-                    <li class="dropdown-item" href="#">Livraria</li>
-                    <li class="dropdown-item" href="#">###</li>
+                    <li class="dropdown-item"> <a href="academico">{{__('Info')}} </a> </li>
+                    <li class="dropdown-item"> <a href="academico/inscricao">{{__('Inscrição Universitária')}}</a> </li>
+                    <li class="dropdown-item"> <a href="academico/livraria">{{__('Livraria')}}</a> </li>
+                    <li class="dropdown-item"> <a href=""></a> ###</li>
                   </ul>
                 </li>
 
@@ -86,9 +87,8 @@
     </header>
 
     <script>
-const chk = document.getElementById('chk')
-
-chk.addEventListener('change', () => {
-  document.body.classList.toggle('dark')
-})
-</script>
+      const chk = document.getElementById('chk')
+      chk.addEventListener('change', () => {
+        document.body.classList.toggle('dark')
+      })
+    </script>
