@@ -26,8 +26,8 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Academicos</a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"> <a href="academico">{{__('Info')}} </a> </li>
-                    <li class="dropdown-item"> <a href="academico/inscricao">{{__('Inscrição Universitária')}}</a> </li>
+                    <li class="dropdown-item"> <a href="apoio_academico">{{__('Info')}} </a> </li>
+                    <li class="dropdown-item"> <a href="apoio_academico/inscricao">{{__('Inscrição Universitária')}}</a> </li>
                     <li class="dropdown-item"> <a href="academico/livraria">{{__('Livraria')}}</a> </li>
                     <li class="dropdown-item"> <a href=""></a> ###</li>
                   </ul>

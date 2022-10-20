@@ -28,16 +28,29 @@ Route::get('/quem_somos', function () {
 
 // ----------------------------------------------------- //
 // Group :: Academico
-Route::prefix('academico')->group(function() {
-    Route::get('', function () {
-        return view('academico.academico');
-    })->name('academico');
+Route::prefix('apoio_academico')->group(function() {
+    Route::get('/', function () {
+        return view('apoio_academico.index');
+    })->name('apoio_academico');
 
     Route::get('/{paramAcad?}', function($paramAcad = null) {
-        return view('academico.'.$paramAcad);
+        return view('apoio_academico.'.$paramAcad);
     });
 });
 // /. Group :: Academico
+// ---------------------------------------------------- //
+
+// Group :: Colaboradores
+Route::prefix('colaboradores')->group(function() {
+    Route::get('/', function () {
+        return view('colaboradores.index');
+    })->name('colaboradores');
+
+    Route::get('/{paramColab?}', function($paramColab = null) {
+        return view('colaboradores.'.$paramColab);
+    });
+});
+// /. Group :: Colaboradores
 // ---------------------------------------------------- //
 
 // Group :: Users
@@ -60,11 +73,25 @@ Route::get('/repositorio', function () {
     return view('repositorio.repositorio');
 })->name('repositorio');
 
-
-
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::group(['middleware' => 'role:student', 'prefix' => 'student', 'as' => 'student.'], function(){
+        Route::resource('lessons', \App\Http\Controllers\Students\LessonControler::class);
+    });
+
+    Route::group(['middleware' => 'role:teacher', 'prefix' => 'teacher', 'as' => 'teacher.'], function(){
+        Route::resource('courses', \App\Http\Controllers\Teachers\CourceController::class);
+    });
+
+    Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function(){
+        Route::resource('users', \App\Http\Controllers\Admin\UserControler::class);
+    });
 });
 

@@ -16,13 +16,31 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
-                        {{ __('Serviços Subscritos') }}
-                    </x-jet-nav-link>
+                    @if (auth()->user()->role_id == 1)
+                        <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
+                            {{ __('Usúarios') }}
+                        </x-jet-nav-link>
+                    @endif
 
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
-                        {{ __('Pagamentos') }}
-                    </x-jet-nav-link>
+                    @if (auth()->user()->role_id == 2)
+                        <x-jet-nav-link href="{{ route('student.lessons.index') }}" :active="request()->routeIs('student.lessons.index')">
+                            {{ __('Explicações') }}
+                        </x-jet-nav-link>
+
+                        <x-jet-nav-link href="{{ route('dashboard') }}">
+                            {{ __('Serviços Subscritos') }}
+                        </x-jet-nav-link>
+
+                        <x-jet-nav-link href="{{ route('dashboard') }}">
+                            {{ __('Pagamentos') }}
+                        </x-jet-nav-link>
+                    @endif
+
+                    @if (auth()->user()->role_id == 3)
+                        <x-jet-nav-link href="{{ route('teacher.courses.index') }}" :active="request()->routeIs('teacher.courses.index')">
+                            {{ __('Cursos') }}
+                        </x-jet-nav-link>
+                    @endif
 
                     <x-jet-nav-link href="{{ route('dashboard') }}">
                         {{ __('Ajuda') }}

@@ -14,6 +14,14 @@ class UserController extends Controller
         return view('user', [
             'user' => $user
         ]);
+
+       /*  if ($user->role_id == 1) { //Para Administrador
+            return $user->name.' é Adminsitrador';
+        }elseif ($user->role_id == 3) { //Para professor
+            return $user->name.' é Professor';
+        }else { //Para Aluno
+            return $user->name.' é Estudante';
+        } */
     }
 
     public function ShowAllUser()

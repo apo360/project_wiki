@@ -1,219 +1,99 @@
 @include('layouts.header')
 
-
-
 <body>
-
-
+    <!-- header section strats -->
+    @include('layouts.menu')
+    <!-- end header section -->
 
   <div class="hero_area">
 
-    <!-- header section strats -->
-
-    @include('layouts.menu_principal')
-
-    <!-- end header section -->
-
     <!-- slider section -->
 
-    <section class="slider_section ">
+  <section class="slider_section ">
 
       <div class="slider_bg_box">
-
         <div class="bg_img_box">
-
-          <img src="images/formado.jpeg"  style = "width: 90%; height: 90%;">
-
-         
-
+          <img src="images/formado.jpeg">
         </div>
-
       </div>
-
-      <div id="customCarousel" class="carousel slide" data-ride="carousel">
-
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-
-            <div class="container ">
-
-              <div class="row">
-
-                <div class="col-md-7 mx-auto">
-
-                  <div class="detail-box">
-
-                    <h1>
-
-                      Benvindo <br>
-
-                      Plataforma Académica & Ciêntífica de Angola
-
-                    </h1>
-
-                    <p>
-
-                      Somos a porta de acesso ao conhecimento e a solução 
-
-                      das suas pesquisas académicas.
-
-                    </p>
-
-                    <div class="btn-box">
-
-                      <a href="" class="btn1">
-
-                        Contacte-nos
-
-                      </a>
-
-                      <a href="" class="btn2">
-
-                        Sobre Nós
-
-                      </a>
-
+      <div class="container ">
+          <div class="row">
+            <div class="col-md-7 mx-auto">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="container ">
+                      <div class="row">
+                        <div class="col-md-7 mx-auto">
+                          <div class="detail-box">
+                            <h1> Benvindo <br> Plataforma Académica & Ciêntífica de Angola </h1>
+                            <p> Somos a porta de acesso ao conhecimento e a solução das suas pesquisas académicas.</p>
+                            <div class="btn-box">
+                              <a href="" class="btn1">Contacte-nos</a>
+                              <a href="" class="btn2">Sobre Nós</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-
                   </div>
-
+                  <div class="carousel-item">
+                    <div class="container ">
+                      <div class="row">
+                        <div class="col-md-7 mx-auto">
+                          <div class="detail-box">
+                            <h1>Encontre aqui! <br>A sua Orientação Académica</h1>
+                            <p>Temos para si um mundo de soluções para as suas dificuldades académicas desde trabalhos ciêntíficos  aos diversos apoios académicos. </p>
+                            <div class="btn-box">
+                              <a href="" class="btn1">Contacte-nos </a>
+                              <a href="" class="btn2">Sobre Nós </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container ">
+                      <div class="row">
+                        <div class="col-md-7 mx-auto">
+                          <div class="detail-box">
+                            <h1>Serviço de Apoio  <br>ao estudante</h1>
+                            <p>Aqui encontrará um  Professor ou Especialista a nível da difucldade  dos seus trabalhos Académicos e poderá  ter apoio com um Professor ou Especialista em tempo real..</p>
+                            <div class="btn-box">
+                              <a href="" class="btn1">Contacte-nos</a>
+                              <a href="" class="btn2">Sobre Nós</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
-
             </div>
 
+            <div class="col-md-5">testexxxxx</div>
           </div>
-
-          <div class="carousel-item">
-
-            <div class="container ">
-
-              <div class="row">
-
-                <div class="col-md-7 mx-auto">
-
-                  <div class="detail-box">
-
-                    <h1>
-
-                      Encontre aqui! <br>
-
-                      A sua Orientação Académica
-
-                    </h1>
-
-                    <p>
-
-                      Temos para si um mundo de soluções para as suas dificuldades académicas desde trabalhos ciêntíficos  aos diversos apoios académicos.
-
-                    </p>
-
-                    <div class="btn-box">
-
-                      <a href="" class="btn1">
-
-                        Contacte-nos 
-
-                      </a>
-
-                      <a href="" class="btn2">
-
-                       Sobre Nós
-
-                      </a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="carousel-item">
-
-            <div class="container ">
-
-              <div class="row">
-
-                <div class="col-md-7 mx-auto">
-
-                  <div class="detail-box">
-
-                    <h1>
-
-                      Serviço de Apoio  <br>
-
-                      ao estudante
-
-                    </h1>
-
-                    <p>
-
-                     Aqui encontrará um  Professor ou Especialista a nível da difucldade  dos seus trabalhos Académicos e poderá  ter apoio com um Professor ou Especialista em tempo real..
-
-                    </p>
-
-                    <div class="btn-box">
-
-                      <a href="" class="btn1">
-
-                        Contacte-nos
-
-                      </a>
-
-                      <a href="" class="btn2">
-
-                       Sobre Nós 
-
-                      </a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <ol class="carousel-indicators">
-
-          <li data-target="#customCarousel" data-slide-to="0" class="active"></li>
-
-          <li data-target="#customCarousel" data-slide-to="1"></li>
-
-          <li data-target="#customCarousel" data-slide-to="2"></li>
-
-        </ol>
-
       </div>
 
     </section>
-
     <!-- end slider section -->
-
   </div>
-
-
-
-
-
-
-
   <!-- about section -->
-
 
 
   <section class="about_section layout_padding ">
