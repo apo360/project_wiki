@@ -55,19 +55,11 @@ Route::prefix('colaboradores')->group(function() {
 
 // Group :: Users
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUser']);
-
-/* Route::prefix('user')->group(function() {
-    Route::get('/user/{id?}', function ($id = null) {
-        return view('profile.'.$id);
-    });
-}); */
-
 // /. Group :: Users
 // ---------------------------------------------------- //
 
-Route::get('/colaborador', function () {
-    return view('colaboradores.colaborador');
-});
+Route::post('/colaboradores/recrutamento', [\App\Http\Controllers\RecrutamentoController::class, 'store'])->name('recrutamento');
+Route::post('', [\App\Http\Controllers\RecrutamentoController::class, 'index']);
 
 Route::get('/repositorio', function () {
     return view('repositorio.repositorio');

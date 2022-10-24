@@ -17,6 +17,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create();
 
         \App\Models\City::factory()->create();
-        
+
+        \App\Models\provincia::factory()->create(); 
+
+        \App\Models\GrauAcademicos::factory()->create(); 
     }
 }

@@ -58,7 +58,7 @@
                         <a class="nav-link" href="#">Vendas de Livros</a>
                     </li> 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="colaborador" role="button" data-bs-toggle="dropdown" :active="request()->routeIs('colaborador')">Colaboradores</a>
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Colaboradores</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="colaboradores/parceiros" :active = "request()->routeIs('colaborador.parceiros')" >Parceiros</a></li>
                             <li><a class="dropdown-item" href="colaboradores/trabalhe_connosco" :active = "request()->routeIs('colaborador.trabalhe_connosco')">Trabalhe Connoscos</a></li>

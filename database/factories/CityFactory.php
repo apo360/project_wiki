@@ -16,8 +16,19 @@ class CityFactory extends Factory
      */
     public function definition()
     {
-        return [
-                'description_city' => 'Belas', 'provincie' => 'Luanda',
+        return ['description_city' => 'Lubango', 'provincie' => 'Huíla',
+            /*
+                ['description_city' => 'Cazenga', 'provincie' => 'Luanda'],
+                ['description_city' => 'Belas', 'provincie' => 'Luanda'],
+                ['description_city' => 'Cacuaco', 'provincie' => 'Luanda'],
+                'description_city' => 'Samba', 'provincie' => 'Luanda',
+                'description_city' => 'Viana', 'provincie' => 'Luanda',
+                'description_city' => 'Icole - Bengo', 'provincie' => 'Luanda',
+                'description_city' => 'Luanda', 'provincie' => 'Luanda',
+                'description_city' => 'Benfica', 'provincie' => 'Luanda',
+                'description_city' => 'Benguela', 'provincie' => 'Benguela',
+                'description_city' => 'Lobito', 'provincie' => 'Benguela',
+                'description_city' => 'Lubango', 'provincie' => 'Huíla',*/
         ];
     }
 }

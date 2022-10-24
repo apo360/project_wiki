@@ -13,18 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cities', function (Blueprint $table) {
+        Schema::create('professor', function (Blueprint $table) {
             $table->id();
-            $table->string('description_city')->unique();
-            $table->string('code_city')->nullable();
-            $table->string('provincie')->nullable();
             $table->timestamps();
         });
-
-    }
-
-    public function run(){
-
     }
 
     /**
@@ -34,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('city');
+        Schema::dropIfExists('professor');
     }
 };
