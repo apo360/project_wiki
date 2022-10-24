@@ -75,8 +75,8 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                           <i class='fa fa-info'></i> Ajuda</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-                            <li><a class="dropdown-item" href="#">Fale Connosco</a></li>
+                            <li><a class="dropdown-item" href="quem_somos">Quem Somos</a></li>
+                            <li><a class="dropdown-item" href="fale_connosco">Fale Connosco</a></li>
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                         </ul>
                     </li>
