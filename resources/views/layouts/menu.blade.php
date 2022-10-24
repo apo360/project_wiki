@@ -55,7 +55,7 @@
                         <a class="nav-link" href="repositorio" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Vendas de Livros</a>
+                        <a class="nav-link" href="#">Biblioteca</a>
                     </li> 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Colaboradores</a>
@@ -117,7 +117,7 @@
                     <a class="nav-link" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Vendas de Livros</a>
+                    <a class="nav-link" href="#">Bibliotecas</a>
                 </li>
                 <li class="nav-item dropdown"> 
                     <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" :active="request()->routeIs('colaborador')"> Colaboradores</a>
