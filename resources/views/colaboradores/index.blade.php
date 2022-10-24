@@ -1,1 +1,1 @@
-Uma descrição Simples de 
+Uma descrição Simples de bem simples
