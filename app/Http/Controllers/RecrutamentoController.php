@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recrutamento;
+use App\Models\City;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\File;
 
 class RecrutamentoController extends Controller
 {
@@ -14,7 +17,7 @@ class RecrutamentoController extends Controller
      */
     public function index()
     {
-        return view('/colaboradores/recrutamento');
+        //
     }
 
     /**
@@ -41,21 +44,31 @@ class RecrutamentoController extends Controller
             'apelido' => ['required', 'string', 'max:150'],
             'telemovel' => ['required', 'integer'],
             'provincia_id' => ['required', 'integer'],
+            'certificado' =>  ['required', File::types(['pdf', 'docx'])->max(6 * 1024),],
         ]);
 
-        return Recrutamento::create([
+        $caminho_certi = $request['certificado']->store('certificados');
+
+        $cidade = City::where('description_city',$request['cidade_id'])->get();
+
+        Recrutamento::create([
             'nomecompleto' => $request['nomecompleto'],
             'email' => $request['email'],
             'apelido' => $request['apelido'],
             'telemovel' => $request['telemovel'],
             'telemovelalt' => $request['telemovelalt'],
             'provincia_id' => $request['provincia_id'],
-            'cidade_id' => $request['cidade_id'],
+            'cidade_id' => $cidade[0]->id,
             'academico_id' => $request['academico'],
+            'documento_curriculum' => $request['comentario'],
+            'documento_certificado' => $caminho_certi,
+            'formacao_academica' => $request['formacao'],
+            'experiencia_academica' => $request['experiencia'],
+            'cadeiras' => $request['cadeiras'],
             'verificado' => 0,
         ]);
 
-        //return redirect()->route('/colaboradores/recrutamento')->with('success', 'Registo Enviado com Sucesso!');
+        return redirect('/colaboradores/recrutamento')->with('status', 'Registo Enviado com Sucesso!');
     }
 
     /**

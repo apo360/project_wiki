@@ -53,13 +53,24 @@ Route::prefix('colaboradores')->group(function() {
 // /. Group :: Colaboradores
 // ---------------------------------------------------- //
 
+// Group Ajuda
+Route::prefix('ajuda')->group(function() {
+    Route::get('/', function () {
+        return view('ajuda.index');
+    })->name('ajuda');
+
+    Route::get('/{paramAjuda?}', function($paramAjuda = null) {
+        return view('Ajuda.'.$paramAjuda);
+    });
+});
+
 // Group :: Users
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUser']);
 // /. Group :: Users
 // ---------------------------------------------------- //
 
 Route::post('/colaboradores/recrutamento', [\App\Http\Controllers\RecrutamentoController::class, 'store'])->name('recrutamento');
-Route::post('', [\App\Http\Controllers\RecrutamentoController::class, 'index']);
+//Route::post('', [\App\Http\Controllers\RecrutamentoController::class, 'index']);
 
 Route::get('/repositorio', function () {
     return view('repositorio.repositorio');

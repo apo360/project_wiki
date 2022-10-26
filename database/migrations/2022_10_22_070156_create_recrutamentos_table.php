@@ -21,11 +21,15 @@ return new class extends Migration
             $table->string('email', 255);
             $table->integer('telemovel');
             $table->integer('telemovelalt')->nullable();
-            $table->integer('provincia_id')->nullable();
-            $table->integer('cidade_id')->nullable();
+            $table->integer('provincia_id');
+            $table->integer('cidade_id');
             $table->string('morada', 255)->nullable();
-            $table->integer('academico_id')->nullable();
-            $table->integer('documento_id')->nullable();
+            $table->integer('academico_id');
+            $table->string('documento_curriculum')->nullable();
+            $table->string('documento_certificado')->nullable();
+            $table->longText('formacao_academica')->nullable();
+            $table->longText('experiencia_academica')->nullable();
+            $table->longText('cadeiras')->nullable();
             $table->integer('verificado')->nullable();
             $table->timestamps();
         });
@@ -38,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recrutamento');
+        Schema::dropIfExists('recrutamentos');
     }
 };

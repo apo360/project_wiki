@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Recrutamento extends Model
 {
     use HasFactory;
@@ -20,6 +21,11 @@ class Recrutamento extends Model
         'cidade_id',
         'morada',
         'academico_id',
+        'documento_curriculum',
+        'documento_certificado',
+        'formacao_academica',
+        'experiencia_academica',
+        'cadeiras',
    ];
 
    /**

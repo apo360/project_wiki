@@ -1,31 +1,8 @@
 
-<style>
-  .texto{
-    font-style: initial;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-
-  .login{
-    
-  }
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    /* body {background: pink;} */
-    .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
- }
- 
-}
-</style>
-
 <header class="header_section">
-
-  <nav class="navbar navbar-expand-lg custom_nav-container texto">
-    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"> -->
-        <div class="container-fluid">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container texto">
+      <div class="container-fluid">
           <a class="navbar-brand" href="/" :active="request()->routeIs('/')">
             <img src="images/favicon.png" alt = "Plataforma Academica" style="width:50px;" class="rounded-pill">
           </a>
@@ -76,75 +53,91 @@
                           <i class='fa fa-info'></i> Ajuda</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-                            <li><a class="dropdown-item" href="#">Fale Connosco</a></li>
+                            <li><a class="dropdown-item" href="ajuda/fale_connosco">Fale Connosco</a></li>
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                         </ul>
                     </li>
                 </ul>
                 <div class = "">
-                  <a href=""> <i class = "fas fa-login"></i> login</a> 
+                  @if (Route::has('login'))
+                    <div class="hidden top-0 right-0 px-6 py-4 sm:block">
+                        @auth
+                            <a href="{{ url('/index') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="text-sm text-gray-400 dark:text-gray-200 underline header__nav__link--cta header__nav__link">
+                                Entrar <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-400 dark:text-gray-200 underline header__nav__link--cta header__nav__link">
+                                  Register <i class="fa fa-lock" aria-hidden="true"></i> 
+                                </a>
+                            @endif
+                        @endauth
+                    </div>
+                  @endif
                 </div>
             </div>
             
         </div>
       </nav>
+  </div>
 
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <hr>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apoio Académico</a>
-                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a class="dropdown-item" href="#">Explicações</a></li>
-                        <li><a class="dropdown-item" href="#">Acompanhamento de Estudo</a></li>
-                        <li><a class="dropdown-item" href="#">Preparatório</a></li>
-                        <li><a class="dropdown-item" href="#">Inscrição Universitária</a></li>
-                        <li><a class="dropdown-item" href="#">Formações</a></li>
-                        <li> <hr class="dropdown-divider"> </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Bibliotecas</a>
-                </li>
-                <li class="nav-item dropdown"> 
-                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" :active="request()->routeIs('colaborador')"> Colaboradores</a>
-                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a class="dropdown-item" href="#">Parceiros</a></li>
-                        <li><a class="dropdown-item" href="#">Trabalhe Connoscos</a></li>
-                        <li><a class="dropdown-item" href="#">Recrutamento</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown">Anúncios</a>
-                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a class="dropdown-item" href="#">Notícias</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown">Ajuda</a>
-                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-                        <li><a class="dropdown-item" href="#">Fale Connosco</a></li>
-                        <li> <hr class="dropdown-divider"> </li>
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </nav> 
+        <hr>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apoio Académico</a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Explicações</a></li>
+                    <li><a class="dropdown-item" href="#">Acompanhamento de Estudo</a></li>
+                    <li><a class="dropdown-item" href="#">Preparatório</a></li>
+                    <li><a class="dropdown-item" href="#">Inscrição Universitária</a></li>
+                    <li><a class="dropdown-item" href="#">Formações</a></li>
+                    <li> <hr class="dropdown-divider"> </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Bibliotecas</a>
+            </li>
+            <li class="nav-item dropdown"> 
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" :active="request()->routeIs('colaborador')"> Colaboradores</a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Parceiros</a></li>
+                    <li><a class="dropdown-item" href="#">Trabalhe Connoscos</a></li>
+                    <li><a class="dropdown-item" href="#">Recrutamento</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown">Anúncios</a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Notícias</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown">Ajuda</a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Quem Somos</a></li>
+                    <li><a class="dropdown-item" href="ajuda/fale_connosco">Fale Connosco</a></li>
+                    <li> <hr class="dropdown-divider"> </li>
+                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav> 
 </header>

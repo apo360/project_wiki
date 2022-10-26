@@ -1,10 +1,9 @@
 @include('layouts.header')
 
-<body>
     <!-- header section strats -->
     @include('layouts.menu')
     <!-- end header section -->
-
+<body>
   <div class="hero_area">
 
     <!-- slider section -->
@@ -75,23 +74,25 @@
                     </div>
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
-                </a>
+                </a> -->
               </div>
             </div>
 
-            <div class="col-md-5">testexxxxx</div>
+            <div class="col-md-5">
+              <!-- -->
+            </div>
           </div>
       </div>
 
     </section>
-    <!-- end slider section -->
+    <!-- end slider section Caroucel-->
   </div>
   <!-- about section -->
 
