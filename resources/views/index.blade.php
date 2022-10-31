@@ -92,7 +92,7 @@
       </div>
 
     </section>
-    <!-- end slider section Caroucel-->
+    <!-- end slider section -->
   </div>
   <!-- about section -->
 

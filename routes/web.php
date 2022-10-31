@@ -60,9 +60,17 @@ Route::prefix('ajuda')->group(function() {
     })->name('ajuda');
 
     Route::get('/{paramAjuda?}', function($paramAjuda = null) {
-        return view('Ajuda.'.$paramAjuda);
+        return view('ajuda.'.$paramAjuda);
     });
 });
+Route::prefix('admin')->group(function() {
+    Route::get('/users', function () {
+        return view('admin.users.index');
+    })->name('admin.users.index');
+    
+});
+
+
 
 // Group :: Users
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUser']);
@@ -70,7 +78,9 @@ Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUs
 // ---------------------------------------------------- //
 
 Route::post('/colaboradores/recrutamento', [\App\Http\Controllers\RecrutamentoController::class, 'store'])->name('recrutamento');
-//Route::post('', [\App\Http\Controllers\RecrutamentoController::class, 'index']);
+
+Route::post('/admin/users/index', [\App\Http\Controllers\DisciplinasController::class, 'store'])->name('disciplinas');
+
 
 Route::get('/repositorio', function () {
     return view('repositorio.repositorio');
@@ -95,6 +105,11 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::resource('users', \App\Http\Controllers\Admin\UserControler::class);
+        
+        Route::get('/', function () {
+            return view('admin/disciplinas');
+        })->name('disciplinas');
+
     });
 });
 

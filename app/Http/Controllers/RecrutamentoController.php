@@ -60,7 +60,7 @@ class RecrutamentoController extends Controller
             'provincia_id' => $request['provincia_id'],
             'cidade_id' => $cidade[0]->id,
             'academico_id' => $request['academico'],
-            'documento_curriculum' => $request['comentario'],
+            'documento_curriculum' => 'vários testes',
             'documento_certificado' => $caminho_certi,
             'formacao_academica' => $request['formacao'],
             'experiencia_academica' => $request['experiencia'],

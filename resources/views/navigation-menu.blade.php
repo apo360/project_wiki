@@ -18,6 +18,18 @@
 
                     @if (auth()->user()->role_id == 1)
                         <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
+                            {{ __('Recrutamento') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('admin.disciplinas') }}" :active="request()->routeIs('admin.disciplinas')">
+                            {{ __('Cadastro de Disciplinas') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
+                            {{ __('Professores') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
+                            {{ __('Clientes') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
                             {{ __('Usúarios') }}
                         </x-jet-nav-link>
                     @endif
