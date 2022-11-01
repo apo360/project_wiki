@@ -21,9 +21,6 @@ Route::get('/principal', function () {
     return view('home.principal');
 });
 
-Route::get('/quem_somos', function () {
-    return view('home.quem_somos');
-})->name('quem_somos');
 // /. Group :: Home -- //
 
 // ----------------------------------------------------- //
@@ -32,37 +29,63 @@ Route::prefix('apoio_academico')->group(function() {
     Route::get('/', function () {
         return view('apoio_academico.index');
     })->name('apoio_academico');
-
-    Route::get('/{paramAcad?}', function($paramAcad = null) {
-        return view('apoio_academico.'.$paramAcad);
-    });
 });
+
+Route::get('/preparatorio', function() {
+    return view('apoio_academico.preparatorio');
+})->name('preparatorio');
+
+Route::get('/explicacoes', function() {
+    return view('apoio_academico.explicacoes');
+})->name('explicacoes');
+
+Route::get('/explicacoes', function() {
+    return view('apoio_academico.explicacoes');
+})->name('explicacoes');
 // /. Group :: Academico
 // ---------------------------------------------------- //
 
-// Group :: Colaboradores
-Route::prefix('colaboradores')->group(function() {
-    Route::get('/', function () {
-        return view('colaboradores.index');
-    })->name('colaboradores');
+// *********************** Group :: Colaboradores ***************************
+Route::get('/', function () {
+    return view('colaboradores.index');
+})->name('colaboradores');
 
-    Route::get('/{paramColab?}', function($paramColab = null) {
-        return view('colaboradores.'.$paramColab);
-    });
-});
+Route::get('/trabalhe_connosco', function() {
+    return view('colaboradores.trabalhe_connosco');
+})->name('trabalhe_connosco');
+
+Route::get('/parceiros', function() {
+    return view('colaboradores.parceiros');
+})->name('parceiros');
+
+Route::get('/recrutamento', function() {
+    return view('colaboradores.recrutamento');
+})->name('view_recrutamento');
 // /. Group :: Colaboradores
 // ---------------------------------------------------- //
 
+// ---------------------------------------------------- //
 // Group Ajuda
 Route::prefix('ajuda')->group(function() {
     Route::get('/', function () {
         return view('ajuda.index');
     })->name('ajuda');
-
-    Route::get('/{paramAjuda?}', function($paramAjuda = null) {
-        return view('ajuda.'.$paramAjuda);
-    });
 });
+
+Route::get('/fale_connosco', function() {
+    return view('ajuda.fale_connosco');
+})->name('fale_connosco');
+
+Route::get('/vantagens', function() {
+    return view('ajuda.vantagens');
+})->name('vantagens');
+
+Route::get('/como_funciona', function() {
+    return view('ajuda.como_funciona');
+})->name('como_funciona');
+// ---------------------------------------------------- //
+// Group Ajuda
+
 Route::prefix('admin')->group(function() {
     Route::get('/users', function () {
         return view('admin.users.index');

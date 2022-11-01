@@ -72,7 +72,7 @@
                       <label for="provincia">Provincia</label>
                       <select name = "provincia_id" id = "provincia_id" class="block mt-1 w-full">
                         <option value="">Selecionar</option>
-                        @foreach(\App\Models\Provincia::all() as $provincias)
+                        @foreach(\App\Models\provincia::all() as $provincias)
                             <option value="{{$provincias->id}}"> {{$provincias->provincia_descricao}}</option>
                         @endforeach
                       </select>

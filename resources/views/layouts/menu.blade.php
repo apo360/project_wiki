@@ -21,15 +21,15 @@
                           <i class="fa fa-graduation-cap"> </i> {{__('Apoio Académico')}}</a>
                         <ul class="dropdown-menu">
                             <!-- <li class="dropdown-item"> <a href="apoio_academico">{{__('Info')}} </a> </li> -->
-                            <li><a class="dropdown-item" href="/apoio_academico/explicacoes">Explicações</a></li>
-                            <li><a class="dropdown-item" href="/apoio_academico/academico">Acompanhamento de Estudo</a></li>
-                            <li><a class="dropdown-item" href="/apoio_academico/preparatorio">Preparatório</a></li>
-                            <li><a class="dropdown-item" href="/apoio_academico/inscricao">{{__('Inscrição Universitária')}}</a> </li>
+                            <li><a class="dropdown-item" href="{{ route('explicacoes') }}" >Explicações</a></li>
+                            <!-- <li><a class="dropdown-item" href="/apoio_academico/academico">Acompanhamento de Estudo</a></li> -->
+                            <li><a class="dropdown-item" href="{{ route('preparatorio') }}">Preparatório</a></li>
+                            <li><a class="dropdown-item" href="{{ route('inscricao') }}">{{__('Inscrição Universitária')}}</a> </li>
                             <!-- <li><a class="dropdown-item" href="/apoio_academico/formacoes">Formações</a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/repositorio" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
+                        <a class="nav-link" href="{{ route('repositorio') }}" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Biblioteca</a>
@@ -37,9 +37,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Colaboradores</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/colaboradores/parceiros" :active = "request()->routeIs('colaborador.parceiros')" >Parceiros</a></li>
-                            <li><a class="dropdown-item" href="/colaboradores/trabalhe_connosco" :active = "request()->routeIs('colaborador.trabalhe_connosco')">Trabalhe Connoscos</a></li>
-                            <li><a class="dropdown-item" href="/colaboradores/recrutamento" :active = "request()->routeIs('colaborador.recrutamento')">Recrutamento</a></li>
+                            <li><a class="dropdown-item" href="{{ route ('parceiros') }}" >Parceiros</a></li>
+                            <li><a class="dropdown-item" href="{{ route ('trabalhe_connosco') }}" >Trabalhe Connoscos</a></li>
+                            <li><a class="dropdown-item" href="{{ route('view_recrutamento') }}">Recrutamento</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -99,16 +99,16 @@
                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apoio Académico</a>
                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
                     <!-- <li class="dropdown-item"> <a href="apoio_academico">{{__('Info')}} </a> </li> -->
-                    <li><a class="dropdown-item" href="/apoio_academico/explicacoes">Explicações</a></li>
-                    <li><a class="dropdown-item" href="/apoio_academico/academico">Acompanhamento de Estudo</a></li>
-                    <li><a class="dropdown-item" href="/apoio_academico/preparatorio">Preparatório</a></li>
-                    <li><a class="dropdown-item" href="/apoio_academico/inscricao">{{__('Inscrição Universitária')}}</a> </li>
+                    <li><a class="dropdown-item" href="{{ route('explicacoes') }}" >Explicações</a></li>
+                    <!-- <li><a class="dropdown-item" href="/apoio_academico/academico">Acompanhamento de Estudo</a></li> -->
+                    <li><a class="dropdown-item" href="{{ route('preparatorio') }}">Preparatório</a></li>
+                    <li><a class="dropdown-item" href="{{ route('inscricao') }}">{{__('Inscrição Universitária')}}</a> </li>
                     <!-- <li><a class="dropdown-item" href="/apoio_academico/formacoes">Formações</a></li> -->
                     <li> <hr class="dropdown-divider"> </li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
+                <a class="nav-link" href = "{{ route('repostorio') }}" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Bibliotecas</a>
@@ -116,9 +116,9 @@
             <li class="nav-item dropdown"> 
                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" :active="request()->routeIs('colaborador')"> Colaboradores</a>
                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="/colaboradores/parceiros"> Parceiros</a></li>
-                    <li><a class="dropdown-item" href="/colaboradores/trabalhe_connosco"> Trabalhe Connoscos</a></li>
-                    <li><a class="dropdown-item" href="/colaboradores/recrutamento"> Recrutamento</a></li>
+                  <li><a class="dropdown-item" href="{{ route ('parceiros') }}" >Parceiros</a></li>
+                  <li><a class="dropdown-item" href="{{ route ('trabalhe_connosco') }}" >Trabalhe Connoscos</a></li>
+                  <li><a class="dropdown-item" href="{{ route('view_recrutamento') }}">Recrutamento</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
