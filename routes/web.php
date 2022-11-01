@@ -35,9 +35,9 @@ Route::get('/preparatorio', function() {
     return view('apoio_academico.preparatorio');
 })->name('preparatorio');
 
-Route::get('/explicacoes', function() {
-    return view('apoio_academico.explicacoes');
-})->name('explicacoes');
+Route::get('/inscricao', function() {
+    return view('apoio_academico.inscricao');
+})->name('inscricao');
 
 Route::get('/explicacoes', function() {
     return view('apoio_academico.explicacoes');
@@ -46,9 +46,6 @@ Route::get('/explicacoes', function() {
 // ---------------------------------------------------- //
 
 // *********************** Group :: Colaboradores ***************************
-Route::get('/', function () {
-    return view('colaboradores.index');
-})->name('colaboradores');
 
 Route::get('/trabalhe_connosco', function() {
     return view('colaboradores.trabalhe_connosco');
@@ -66,11 +63,6 @@ Route::get('/recrutamento', function() {
 
 // ---------------------------------------------------- //
 // Group Ajuda
-Route::prefix('ajuda')->group(function() {
-    Route::get('/', function () {
-        return view('ajuda.index');
-    })->name('ajuda');
-});
 
 Route::get('/fale_connosco', function() {
     return view('ajuda.fale_connosco');

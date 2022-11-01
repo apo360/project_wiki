@@ -53,7 +53,7 @@
                           <i class='fa fa-info'></i> Ajuda</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="ajuda/" :active = "request()->routeIs('ajuda')">Quem Somos</a></li>
-                            <li><a class="dropdown-item" href="ajuda/fale_connosco">Fale Connosco</a></li>
+                            <li><a class="dropdown-item" href="{{ route ('fale_connosco') }}">Fale Connosco</a></li>
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                         </ul>
                     </li>
@@ -108,7 +108,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href = "{{ route('repostorio') }}" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
+                <a class="nav-link" href = "{{ route('repositorio') }}" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Bibliotecas</a>
@@ -131,7 +131,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown">Ajuda</a>
                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
                     <li><a class="dropdown-item" href="#">Quem Somos</a></li>
-                    <li><a class="dropdown-item" href="ajuda/fale_connosco">Fale Connosco</a></li>
+                    <li><a class="dropdown-item" href="{{ route ('fale_connosco') }}">Fale Connosco</a></li>
                     <li> <hr class="dropdown-divider"> </li>
                     <li><a class="dropdown-item" href="#">FAQ</a></li>
                 </ul>
