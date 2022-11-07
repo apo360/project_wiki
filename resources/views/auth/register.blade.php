@@ -1,14 +1,50 @@
 
+<head>
+      <!-- bootstrap core css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+</head>
+
+<style>
+    @inport url('');
+    body{
+        background-color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .box{
+        position: relative;
+        width: 780px;
+        height: 420px;
+        background-color: beige;
+        border-radius: 8px;
+
+    }
+</style>
+
 <body>
-    <div class = "">
+    <div class = "box">
     <x-jet-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <div>
-                <x-jet-label for="name" value="{{ __('Nome Completo') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <div class = "row">
+                <div class = "col-md-6">
+                    <div class = "form-group">
+                        <x-jet-label for="name" value="{{ __('Nome Completo') }}" />
+                        <x-jet-input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                    </div>
+                </div>
+                <div class = "col-md-6">
+                    right
+                </div>
             </div>
+            
 
             <div>
                 <x-jet-label for="surname" value="{{ __('Apelido') }}" />
@@ -38,6 +74,7 @@
             <div class="">
                 <x-jet-label for="register_id" value="{{ __('Registar Como: ') }}" />
                 <select id = "register_id" name = "register_id">
+                    <option value="4"> Educador</option>
                     <option value="2"> Estudante</option>
                     <option value="3"> Professor</option>
                 </select>

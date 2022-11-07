@@ -94,7 +94,7 @@ Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUs
 
 Route::post('/colaboradores/recrutamento', [\App\Http\Controllers\RecrutamentoController::class, 'store'])->name('recrutamento');
 
-Route::post('/admin/users/index', [\App\Http\Controllers\DisciplinasController::class, 'store'])->name('disciplinas');
+Route::post('disciplinas', [\App\Http\Controllers\DisciplinasController::class, 'store'])->name('cadastro_disciplina');
 
 
 Route::get('/repositorio', function () {
@@ -106,6 +106,15 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/disciplinas', function () {
+        return view('admin.disciplinas');
+    })->name('disciplinas');
+
+    
+    Route::get('/professores/listagem', function () {
+        return view('admin.professores.listagem');
+    })->name('professores.listagem');
 });
 
 Route::group(['middleware' => 'auth'], function() {
@@ -120,10 +129,6 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::resource('users', \App\Http\Controllers\Admin\UserControler::class);
-        
-        Route::get('/', function () {
-            return view('admin/disciplinas');
-        })->name('disciplinas');
 
     });
 });

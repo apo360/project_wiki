@@ -96,6 +96,17 @@
   </div>
   <!-- about section -->
 
+  <section>
+      <div class = "row">
+        <div class = "col-md-6" style = "background-color: red;"> 
+          teste 1
+        </div>
+        <div class = "col-md-6" style = "background-color: cyan;"> 
+          <img src="" alt="">
+          teste 222222
+        </div>
+      </div>
+  </section>
 
   <section class="about_section layout_padding ">
 

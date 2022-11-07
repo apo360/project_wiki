@@ -20,10 +20,10 @@
                         <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
                             {{ __('Recrutamento') }}
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('admin.disciplinas') }}" :active="request()->routeIs('admin.disciplinas')">
+                        <x-jet-nav-link href="{{ route('disciplinas') }}" :active="request()->routeIs('admin.disciplinas')">
                             {{ __('Cadastro de Disciplinas') }}
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
+                        <x-jet-nav-link href="{{ route('professores.listagem') }}" :active="request()->routeIs('admin.users.index')">
                             {{ __('Professores') }}
                         </x-jet-nav-link>
                         <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">

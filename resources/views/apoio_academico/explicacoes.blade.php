@@ -11,14 +11,21 @@
             <x-jet-button class="ml-4">
                 {{ __('Buscar') }}
             </x-jet-button>
+            <input type="submit" name="" value="enviar 2" style = "background-color: red; border-radius: 7%; border: 2px black solid;">
         </form>
     </header>
 
     <section>
+        
         @foreach(\App\Models\Disciplinas::all() as $discip)
-            {{ $discip->codigo }}
-            <b> <a href = "#">{{ $discip->descricao }}</a> </b>
-            {{ $discip->icon }}
+            <div class = "card card-dark">
+                <img src="" alt="">
+                <div class = "card-body">
+                    <h5 class = "card-title">{{ $discip->descricao }}</h5>
+                    <p class = "card-text"> {{ $discip->codigo }}</p>
+                    <a href="#" class = "btn btn-primary">click</a>
+                </div>
+            </div>
         @endforeach
     </section>
 
