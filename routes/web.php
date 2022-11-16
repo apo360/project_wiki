@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DisciplinasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,9 +40,13 @@ Route::get('/inscricao', function() {
     return view('apoio_academico.inscricao');
 })->name('inscricao');
 
-Route::get('/explicacoes', function() {
-    return view('apoio_academico.explicacoes');
-})->name('explicacoes');
+Route::get('/explicacoes', [ DisciplinasController::class, 'index'])->name('explicacoes');
+
+Route::get('/explicacoes/{disciplina}', function($disciplina = null) {
+    return view('apoio_academico.academico',[
+        'disciplina' => $disciplina
+    ]);
+});
 // /. Group :: Academico
 // ---------------------------------------------------- //
 
@@ -84,8 +89,6 @@ Route::prefix('admin')->group(function() {
     })->name('admin.users.index');
     
 });
-
-
 
 // Group :: Users
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUser']);
