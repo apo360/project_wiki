@@ -17,7 +17,12 @@ class DisciplinasController extends Controller
      */
     public function index()
     {
-        //
+        $discplinas = Disciplinas::all();
+
+        return view('apoio_academico.explicacoes',[
+            
+            'disciplina' => $discplinas
+        ]);
     }
 
     /**
@@ -42,15 +47,15 @@ class DisciplinasController extends Controller
             'codigo' => ['required', 'string', 'max:255'],
             'disciplina' => ['required', 'string', 'max:255', 'unique'],
         ]);
-/* 
+ 
         $icons = !$request['icon']=null ? $request['icon']->store('icons') : '';
     
         Disciplinas::create([
             'codigo' => $request['codigo'],
             'descricao' => $request['disciplina'],
             'icon' => $icons,
-        ]); */
+        ]);
 
-        //return redirect('disciplinas')->with('status', 'Registo Enviado com Sucesso!');
+        return redirect('disciplinas')->with('status', 'Registo Enviado com Sucesso!');
     }
 }

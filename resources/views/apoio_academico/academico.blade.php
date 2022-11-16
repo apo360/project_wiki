@@ -1,1 +1,3 @@
-Academico blade
+
+
+    {{$disciplina}}
