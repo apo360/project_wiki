@@ -20,8 +20,6 @@
         </form>
     </header>
 
-    {{dd($disciplina)}}
-
     <section>
         @foreach($disciplina as $discip)
             <div class = "card card-dark">
