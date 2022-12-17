@@ -62,7 +62,7 @@
                   @if (Route::has('login'))
                     <div class="hidden top-0 right-0 px-6 py-4 sm:block">
                         @auth
-                            <a href="{{ url('/index') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                         @else
                             <a href="{{ route('login') }}" class="text-sm text-gray-400 dark:text-gray-200 underline header__nav__link--cta header__nav__link">
                                 Entrar <i class="fa fa-user" aria-hidden="true"></i>
@@ -137,6 +137,24 @@
                 </ul>
             </li>
           </ul>
+          <div class = "">
+                  @if (Route::has('login'))
+                    <div class="hidden top-0 right-0 px-6 py-4 sm:block">
+                        @auth
+                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="text-sm text-gray-400 dark:text-gray-200 underline header__nav__link--cta header__nav__link">
+                                Entrar <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-400 dark:text-gray-200 underline header__nav__link--cta header__nav__link">
+                                  Register <i class="fa fa-lock" aria-hidden="true"></i> 
+                                </a>
+                            @endif
+                        @endauth
+                    </div>
+                  @endif
+                </div>
         </div>
       </div>
     </div>

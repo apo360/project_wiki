@@ -19,7 +19,7 @@ class DisciplinasController extends Controller
     {
         $discplinas = Disciplinas::all();
 
-        return view('apoio_academico.explicacoes',[
+        return view('apoio_academico.disciplinas',[
             
             'disciplina' => $discplinas
         ]);
@@ -43,8 +43,8 @@ class DisciplinasController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'codigo' => ['required', 'string', 'max:255'],
+        /*$request->validate([
+            'codigo' => ['required', 'string', 'max:25'],
             'disciplina' => ['required', 'string', 'max:255', 'unique'],
         ]);
  
@@ -54,8 +54,8 @@ class DisciplinasController extends Controller
             'codigo' => $request['codigo'],
             'descricao' => $request['disciplina'],
             'icon' => $icons,
-        ]);
+        ]);*/
 
-        return redirect('disciplinas')->with('status', 'Registo Enviado com Sucesso!');
+        return redirect('admin.disciplinas')->with('status', 'Registo Enviado com Sucesso!');
     }
 }

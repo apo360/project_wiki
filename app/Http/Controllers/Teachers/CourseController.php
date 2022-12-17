@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Teachers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Professor;
 
 class CourseController extends Controller
 {
@@ -15,6 +16,20 @@ class CourseController extends Controller
     public function index()
     {
         return view('teacher.courses.index');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function information()
+    {
+        $prof = Professor::where('fk_user', '=', auth()->user()->id)->get();
+        
+        return view('teacher.update-profile-professor',[
+            'professor' => $prof
+        ]);
     }
 
     /**

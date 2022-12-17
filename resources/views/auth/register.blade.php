@@ -208,8 +208,8 @@
                         <select id = "register_id" name = "register_id" class="form-control">
                             <option value="">Selecionar</option>
                             <option value="4">Educador</option>
-                            <option value="2">Estudante</option>
-                            <option value="3">Professor</option>
+                            <option value="2">student</option>
+                            <option value="3">teacher</option>
                         </select>
                     </div>
                 </div>

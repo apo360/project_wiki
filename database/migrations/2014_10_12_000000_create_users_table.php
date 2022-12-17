@@ -25,8 +25,8 @@ return new class extends Migration
             $table->string('surname');
             $table->string('gender')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('role_id')->nullable();
-            $table->integer('city_id')->nullable();
+            $table->foreignId('role_id')->nullable();
+            $table->foreignId('city_id')->nullable();
             $table->timestamps();
         });
 

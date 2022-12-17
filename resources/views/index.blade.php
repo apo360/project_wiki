@@ -1,171 +1,245 @@
-@include('layouts.header')
+<style>
+    
+    .texto{ font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 100px;
+    color:black;}
+    
+    .banner_prof{
+        border-radius:;
+        display:flex;
+        
+        justify-content:center
+    }
+    .button_01{font-family: 'Sarala', sans-serif; 
 
+    background-color:#fad6d6;
+    width: 100px;
+    height: 50px;
+    border: 20px;
+    align-items:start;
+    border-radius: 7px; color: white;
+    box-shadow:#141c2c;
+    
+    
+}
+.button_01:hover{
+
+    background-color: #183b48;
+}
+.texto_01{color:white;}
+</style>
+
+
+
+@include('layouts.header')
+ <link href="{{ asset('css/main.css') }}" rel="stylesheet" /> 
+ <link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet" /> 
+
+ 
     <!-- header section strats -->
     @include('layouts.menu')
     <!-- end header section -->
+   <!-- Wrapper -->
+
+<html>
+<div id = "fb-root" ></div> <script async defer crossorigin = " anonymous" src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v15.0&appId= 1244653652234794&autoLogAppEvents=1" nonce = "uFweMhOP" ></script> 
+     
+
+<div id = "fb-root" ></div> <script async defer crossorigin = " anonymous" src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v15.0&appId= 1244653652234794&autoLogAppEvents=1" nonce = "fFjkZSll" ></script> 
+     
 <body>
-  <div class="hero_area">
+ 
+	<div id="wrapper">
 
-    <!-- slider section -->
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
 
-  <section class="slider_section ">
+							<!-- Header -->
+								<header id="header">
+									<a href="https://www.paca.ao/public/" class="logo" style="color:black;"><strong>P.A.C.A</strong> Plataforma Académica e Ciêntífica de Angola.</a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/paca-angola-5aa40b253/" class="icon brands fa fa-linkedin"><span class="label">Linkedin</span></a></li>
+										
+										<li><a href="https://www.facebook.com/WikLinksAngola" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://wa.me/+244 942547440" class="icon brands fab fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+						
+								
+									</ul>
+									
+								</header>
 
-      <div class="slider_bg_box">
-        <div class="bg_img_box">
-          <img src="images/formado.jpeg">
-        </div>
-      </div>
-      <div class="container ">
-          <div class="row">
-            <div class="col-md-7 mx-auto">
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="container ">
-                      <div class="row">
-                        <div class="col-md-7 mx-auto">
-                          <div class="detail-box">
-                            <h1> Benvindo <br> Plataforma Académica & Ciêntífica de Angola </h1>
-                            <p> Somos a porta de acesso ao conhecimento e a solução das suas pesquisas académicas.</p>
-                            <div class="btn-box">
-                              <a href="" class="btn1">Contacte-nos</a>
-                              <a href="" class="btn2">Sobre Nós</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="container ">
-                      <div class="row">
-                        <div class="col-md-7 mx-auto">
-                          <div class="detail-box">
-                            <h1>Encontre aqui! <br>A sua Orientação Académica</h1>
-                            <p>Temos para si um mundo de soluções para as suas dificuldades académicas desde trabalhos ciêntíficos  aos diversos apoios académicos. </p>
-                            <div class="btn-box">
-                              <a href="" class="btn1">Contacte-nos </a>
-                              <a href="" class="btn2">Sobre Nós </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="container ">
-                      <div class="row">
-                        <div class="col-md-7 mx-auto">
-                          <div class="detail-box">
-                            <h1>Serviço de Apoio  <br>ao estudante</h1>
-                            <p>Aqui encontrará um  Professor ou Especialista a nível da difucldade  dos seus trabalhos Académicos e poderá  ter apoio com um Professor ou Especialista em tempo real..</p>
-                            <div class="btn-box">
-                              <a href="" class="btn1">Contacte-nos</a>
-                              <a href="" class="btn2">Sobre Nós</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a> -->
-              </div>
-            </div>
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1 class="text_01" style="text-align:center">Serviço de Apoio Académico<br /> </h1>
+											<p class="texto" style="text-align:justify; font-family: 'Sarala', sans-serif; font-weight: 50; font-size: 20px;">   
+                      <img src="images/lapis_animado.png" style="width:70px;" /> <strong>Precisa de Explicação-Orientação ou acompanhamento Académico? Seja Ben-Vindo</strong></p>
+										</header>
+										<p></p>
+										<ul class="actions">
+											<li><a href="https://www.paca.ao/public/register" class="button big">Inscrição Grátis</a></li>
+										</ul>
+									</div>
+									
+									<span class="image object">
+									    <div class = "fb-share-button" data-href = "https://www.facebook.com/WikLinksAngola" data-layout = "button_count" data-size = "small" ><a target = "_blank" href = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FWikLinksAngola&src=sdkpreparse" class = "fb-xfbml-parse-ignore" > Partilhar </a></div>   
+										<img src="images/c1.jpeg" alt="" />
+									</span>
+									
+								</section>
 
-            <div class="col-md-5">
-              <!-- -->
-            </div>
-          </div>
-      </div>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2 >Especialidades mais procuradas</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-gem"></span>
+											<div class="content">
+												<h3>Ciências Jurídicas</h3>
+												<p class="texto_1"style="color:black;">Direito-penal,Constitucional,Civil</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-paper-plane"></span>
+											<div class="content">
+												<h3>Engenharias</h3>
+												<p style="color:black;">Engenharia-Naval,Mecânica,Informática,Electricidade,Programação,Arquitetura,Engenharia Civil..</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-rocket"></span>
+											<div class="content">
+												<h3>Ciências da Saúde</h3>
+												<p style="color:black;">Enfermagem,Clinica-Geral,Pediatria,Farmacologia,Fisioterapia,Neurologia,Estomatologia...</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-signal"></span>
+											<div class="content">
+												<h3>Ciências da Comunicação</h3>
+												<p style="color:black;">Jornalismo,Redatação.</p>
+											</div>
+										</article>
+									</div>
+								</section>
 
-    </section>
-    <!-- end slider section -->
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- banner_prof -->
+
+  <section class="banner_prof">
+      
+  <div class="ajuda_texto" style="background-color:#f4f4f2;" >
+      <img class="ajuda_imagem" src="images/segue_nos.png" style="width:10%; border-radius:50%;">
+      
+    <h1 class="conteudo" style= "text-align:center;font-family: sans-serif; color:red;"> 
+        <img src="images/icon_livro.png" style = " wdith:10px; color:red;">
+        <strong> É professor e quer ter uma renda extra!! seja nosso colaborador
+        <ul class="actions">
+					<li><a href="https://www.paca.ao/public/register" class="button_01">Inscrição Grátis</a></li>
+				</ul>
+    </h1>  
+  <div
+       
   </div>
-  <!-- about section -->
-
-  <section>
-      <div class = "row">
-        <div class = "col-md-6" style = "background-color: red;"> 
-          teste 1
-        </div>
-        <div class = "col-md-6" style = "background-color: cyan;"> 
-          <img src="" alt="">
-          teste 222222
-        </div>
-      </div>
+      
+ 
   </section>
+  
+  <div class = "fb-share-button" data-href = "https://www.facebook.com/WikLinksAngola" data-layout = "button_count" data-size = "small" ><a target = "_blank" href = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FWikLinksAngola&src=sdkpreparse" class = "fb-xfbml-parse-ignore" > Partilhar </a></div>   
 
-  <section class="about_section layout_padding ">
+     <!-- banner_prof end-->
+     
+     
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Disciplinas mais procuradas</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="https://www.paca.ao/public/explicacoes" class="image"><img src="images/mat.png" alt="" /></a>
+											<h3>Matemática</h3>
+											<p></p>
+											<ul class="actions">
+												<li><a href="https://www.paca.ao/public/explicacoes" class="button">Ver Mais</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="https://www.paca.ao/public/explicacoes" class="image"><img src="images/fisi.png" alt="" /></a>
+											<h3>Física</h3>
+											<p> </p>
+											<ul class="actions">
+												<li><a href="https://www.paca.ao/public/explicacoes" class="button">Ver Mais</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/dire.png" alt="" /></a>
+											<h3>Direito</h3>
+											<p></p>
+											<ul class="actions">
+												<li><a href="https://www.paca.ao/public/explicacoes" class="button">Ver Mais</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/enfe.png" alt="" /></a>
+											<h3>Enfermagem</h3>
+											<p></p>
+											<ul class="actions">
+												<li><a href="https://www.paca.ao/public/explicacoes" class="button">Ver Mais</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/bio.png" alt="" /></a>
+											<h3>Biologia</h3>
+											<p></p>
+											<ul class="actions">
+												<li><a href="https://www.paca.ao/public/explicacoes" class="button">Ver Mais</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/info.png" alt="" /></a>
+											<h3>Informática</h3>
+											<p></p>
+											<ul class="actions">
+												<li><a href="https://www.paca.ao/public/explicacoes" class="button">Ver Mais</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
 
-    <div class="container">
+						</div>
+					</div>
 
-      <div class="row">
+			
 
-        <div class="col-md-6">
+						</div>
+					</div>
 
-          <div class="img-box">
-
-            <img src="images/6461.jpg" alt="">
-
-          </div>
-
-        </div>
-
-        <div class="col-md-6">
-
-          <div class="detail-box">
-
-            <div class="heading_container">
-
-              <h2>
-
-                Quem Somos
-
-              </h2>
-
-            </div>
-
-            <p>
-
-              PACA é uma plataforma desenvolvida com o foco na resolução de dificuldades do mundo académico entre elas: Acesso facil aos conteúdos Digitais a Partilha de informação e Desenvolvimento de conhecimento Ciêntífico.  
-
-            </p>
-
-            <a href="quem_somos" :active="request()->routeIs('quem_somos')">
-
-              Saiba mais
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+			</div>
 
 
 
-  <!-- end about section -->
 
-
-
+   
+   
   <!-- course section start -->
 
 
@@ -184,9 +258,9 @@
 
     <div class="container-fluid pr-0">
 
-      <div class="heading_container">
+      <div class="heading_container" >
 
-        <h2>
+        <h2 class="texto_01">
 
           Apoio ao Estudante
 
@@ -230,7 +304,7 @@
 
                 </p>
 
-                <a href="">
+                <a href=" repositorio" :active="request()->routeIs('repositorio')">
 
                   Ver Mais
 
@@ -256,7 +330,7 @@
 
                 <h4>
 
-                  Aulas online
+                  Formações
 
                 </h4>
 
@@ -266,7 +340,7 @@
 
                 </p>
 
-                <a href="">
+                <a href="formacoes" :active="request()->routeIs('formacoes')">
 
                   Ver Mais
 
@@ -302,7 +376,7 @@
 
                 </p>
 
-                <a href="">
+                <a href="preparatorio" :active="request()->routeIs('preparatorio')">
 
                   Ver Mais
 
@@ -328,7 +402,7 @@
 
                 <h4>
 
-                  Assis. Especializada
+                  Explicações
 
                 </h4>
 
@@ -338,7 +412,7 @@
 
                 </p>
 
-                <a href="">
+                <a href="explicacoes" :active="request()->routeIs('explicacoes')">
 
                   Ver Mais
 
@@ -361,7 +435,6 @@
 
 
   <!-- course section ends -->
-
 
 
   <!-- teacher section -->
@@ -390,21 +463,21 @@
 
             <div class="img-box">
 
-              <img src="images/t1.png" alt="">
+              <img src="images/Moraton.png" alt="">
 
             </div>
 
             <div class="detail-box">
 
-              <h5>
+              <h5class="texto_01">
 
-                Soraia Silva
+                Ladislau Moraton
 
               </h5>
 
-              <h6>
+              <h6 class="texto_01">
 
-                Professora
+                Mestre-Professor
 
               </h6>
 
@@ -420,21 +493,51 @@
 
             <div class="img-box">
 
-              <img src="images/t2.jpg" alt="">
+              <img src="images/banda.png" alt="">
 
             </div>
 
             <div class="detail-box">
 
-              <h5>
+              <h5class="texto_01">
 
-                Martin Evans
+                Manuel Banda
 
               </h5>
 
-              <h6>
+              <h6 class="texto_01">
 
-              Professor
+              Dr-Professor
+
+              </h6>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="box">
+
+            <div class="img-box">
+
+              <img src="images/panzo.png" alt="">
+
+            </div>
+
+            <div class="detail-box">
+
+              <h5class="texto_01">
+
+                Custodio Panzo
+
+              </h5>
+
+              <h6class="texto_01">
+
+              Mestre-Professor
 
               </h6>
 
@@ -456,45 +559,15 @@
 
             <div class="detail-box">
 
-              <h5>
+              <h5 class="texto_01">
 
-                Marta Dos santos
-
-              </h5>
-
-              <h6>
-
-              Professora
-
-              </h6>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="col-sm-6 col-lg-3">
-
-          <div class="box">
-
-            <div class="img-box">
-
-              <img src="images/t4.jpg" alt="">
-
-            </div>
-
-            <div class="detail-box">
-
-              <h5>
-
-                Clara Mark
+                Cristina Luis
 
               </h5>
 
-              <h6>
+              <h6 class="texto_01">
 
-              Professora
+              Lic-Professora
 
               </h6>
 
@@ -508,7 +581,7 @@
 
       <div class="btn-box">
 
-        <a href="">
+        <a href=" parceiros" :active="request()->routeIs('parceiros')">
 
           Ver todos
 
@@ -706,11 +779,220 @@
 
     </div>
 
-  </section>
+  </section> <br>
 
 
 
   <!-- end client section -->
+
+
+
+<!-- dicas section -->
+
+
+
+  <section class="client_section ">
+
+    <div class="container">
+
+      <div class="heading_container">
+
+        <h2 class="txt_01" style="align:text-center; ">
+
+         Dicas para conseguir entrar na faculdade e ganhar uma bolsa de estudos!
+
+        </h2>
+
+      </div>
+
+      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+
+            <div class="row">
+
+              <div class="col-md-11 col-lg-10 mx-auto">
+
+                <div class="box">
+
+                  <div class="img-box">
+
+                    <img src="images/baner01.jpg" alt="" />
+
+                  </div>
+
+                  <div class="detail-box">
+
+                    <div class="name">
+
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+                      <h6>
+
+                      Academias Militares
+
+                      </h6>
+
+                    </div>
+
+                    <p>
+
+                      A PACA veio para dar solução aos pequenos problemas que os jovens e não so enfrentam problemas pequenos mas com grande impacto na formação de cada pessoa Obrigado pela ajuda que tem dado a todos!
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="carousel-item">
+
+            <div class="row">
+
+              <div class="col-md-11 col-lg-10 mx-auto">
+
+                <div class="box">
+
+                  <div class="img-box">
+
+                    <img src="images/baner01.jpg" alt="" />
+
+                  </div>
+
+                  <div class="detail-box">
+
+                    <div class="name">
+
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+                      <h6>
+
+                        Universidades privadas
+
+                      </h6>
+
+                    </div>
+
+                    <p>
+
+                       PACA veio para dar solução aos pequenos problemas que os jovens e não so enfrentam problemas pequenos mas com grande impacto na formação de cada pessoa Obrigado pela ajuda que tem dado a todos!
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="carousel-item">
+
+            <div class="row">
+
+              <div class="col-md-11 col-lg-10 mx-auto">
+
+                <div class="box">
+
+                  <div class="img-box">
+
+                    <img src="images/baner01.jpg" alt="" />
+
+                  </div>
+
+                  <div class="detail-box">
+
+                    <div class="name">
+
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+                      <h6>
+
+                        Bolsa de estudos INAGBE
+
+                      </h6>
+
+                    </div>
+
+                    <p>
+
+                       PACA veio para dar solução aos pequenos problemas que os jovens e não so enfrentam problemas pequenos mas com grande impacto na formação de cada pessoa Obrigado pela ajuda que tem dado a todos!
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="carousel_btn-container">
+
+          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+
+            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+
+            <span class="sr-only">Previous</span>
+
+          </a>
+
+          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+            <span class="sr-only">Next</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- end dicas section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -736,7 +1018,7 @@
 
       <div class="heading_container">
 
-        <h2>
+        <h2 class="texto_01">
 
           NOSSOS PARCEIROS
 
@@ -985,6 +1267,7 @@
               </p>
 
               <div class="social_box">
+                  
 
                 <a href="">
 
@@ -1092,9 +1375,10 @@
 
                   Subscreva-se
 
-                </button>
+                </button> 
+                <br>
 
-                
+                <div class = "fb-page" data-href = "https://www.facebook.com/WikLinksAngola" data-tabs = "timeline" data-width = "300" data-height = "300" data-small -header = "true" data-adapt-container-width = "true" data-hide-cover = "false" data-show-facepile = "true" ><blockquote cite = "https://www.facebook.com /WikLinksAngola" class = "fb-xfbml-parse-ignore" ><a href =            "https://www.facebook.com/WikLinksAngola" > Plataforma Académica & Científica De Angola </a></blockquote></div>
 
               </form>
 

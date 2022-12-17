@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Teachers\CourseController;
 use App\Http\Controllers\DisciplinasController;
+use App\Http\Controllers\ProfdiscpController;
+use App\Http\Controllers\Teachers\ProfessorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,11 +45,9 @@ Route::get('/inscricao', function() {
 
 Route::get('/explicacoes', [ DisciplinasController::class, 'index'])->name('explicacoes');
 
-Route::get('/explicacoes/{disciplina}', function($disciplina = null) {
-    return view('apoio_academico.academico',[
-        'disciplina' => $disciplina
-    ]);
-});
+Route::get('/explicacoes/{disciplina}', [ProfdiscpController::class, 'index']);
+
+Route::get('/explicacoes/{disciplina}/perfil/{id}', [ProfessorController::class, 'PerfilShow']);
 // /. Group :: Academico
 // ---------------------------------------------------- //
 
@@ -97,28 +98,17 @@ Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUs
 
 Route::post('/colaboradores/recrutamento', [\App\Http\Controllers\RecrutamentoController::class, 'store'])->name('recrutamento');
 
-Route::post('disciplinas', [\App\Http\Controllers\DisciplinasController::class, 'store'])->name('cadastro_disciplina');
-
-
-Route::get('/repositorio', function () {
-    return view('repositorio.repositorio');
-})->name('repositorio');
+Route::get('/repositorio', function () { return view('repositorio.repositorio'); })->name('repositorio');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
 
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
 
-    Route::get('/disciplinas', function () {
-        return view('admin.disciplinas');
-    })->name('disciplinas');
-
-    
-    Route::get('/professores/listagem', function () {
-        return view('admin.professores.listagem');
-    })->name('professores.listagem');
+    Route::get('/professores/listagem', function () { return view('admin.professores.listagem'); })->name('professores.listagem');
 });
+
+    Route::get('/admin/disciplinas', function () { return view('admin.disciplinas'); })->name('disciplinas');
+    Route::post('/admin/disciplinas', [DisciplinasController::class, 'store'])->name('cadastro_disciplina');
 
 Route::group(['middleware' => 'auth'], function() {
 
@@ -127,12 +117,16 @@ Route::group(['middleware' => 'auth'], function() {
     });
 
     Route::group(['middleware' => 'role:teacher', 'prefix' => 'teacher', 'as' => 'teacher.'], function(){
-        Route::resource('courses', \App\Http\Controllers\Teachers\CourceController::class);
+
+        Route::resource('courses', \App\Http\Controllers\Teachers\CourseController::class);
+
     });
+
+    Route::post('/professores/informacao', [ProfessorController::class, 'update'])->name('update_info_professor');
+     Route::get('/professores/informacao', [ProfessorController::class, 'index'])->name('UpdateProfessor');
 
     Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::resource('users', \App\Http\Controllers\Admin\UserControler::class);
-
     });
 });
 

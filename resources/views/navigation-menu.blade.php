@@ -49,8 +49,14 @@
                     @endif
 
                     @if (auth()->user()->role_id == 3)
+                        <x-jet-nav-link href="{{ route('UpdateProfessor') }}" :active="request()->routeIs('UpdateProfessor')">
+                            {{ __('Informação Professor') }}
+                        </x-jet-nav-link>
                         <x-jet-nav-link href="{{ route('teacher.courses.index') }}" :active="request()->routeIs('teacher.courses.index')">
-                            {{ __('Cursos') }}
+                            {{ __('Planos') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('teacher.courses.index') }}" :active="request()->routeIs('teacher.courses.index')">
+                            {{ __('Mensagens') }}
                         </x-jet-nav-link>
                     @endif
 
