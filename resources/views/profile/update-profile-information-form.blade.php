@@ -1,6 +1,6 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Perfil de Informação') }}
     </x-slot>
 
     <x-slot name="description">
@@ -39,12 +39,12 @@
                 </div>
 
                 <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
-                    {{ __('Select A New Photo') }}
+                    {{ __('Selecionar nova foto') }}
                 </x-jet-secondary-button>
 
                 @if ($this->user->profile_photo_path)
                     <x-jet-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
-                        {{ __('Remove Photo') }}
+                        {{ __('Remover Foto') }}
                     </x-jet-secondary-button>
                 @endif
 
@@ -54,9 +54,13 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Name') }}" />
+            <x-jet-label for="name" value="{{ __('Nome Completo') }}" />
             <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
             <x-jet-input-error for="name" class="mt-2" />
+
+            <x-jet-label for="surname" value="{{ __('Apelido') }}" />
+            <x-jet-input id="surname" type="text" class="mt-1 block w-full" wire:model.defer="state.surname" autocomplete="surname" />
+            <x-jet-input-error for="surname" class="mt-2" />
         </div>
 
         <!-- Email -->
@@ -67,10 +71,10 @@
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $this->user->hasVerifiedEmail())
                 <p class="text-sm mt-2">
-                    {{ __('Your email address is unverified.') }}
+                    {{ __('O seu email não foi verificado.') }}
 
                     <button type="button" class="underline text-sm text-gray-600 hover:text-gray-900" wire:click.prevent="sendEmailVerification">
-                        {{ __('Click here to re-send the verification email.') }}
+                        {{ __('Para reenviar a verificação de Email, clique aqui!') }}
                     </button>
                 </p>
 
@@ -85,7 +89,7 @@
 
     <x-slot name="actions">
         <x-jet-action-message class="mr-3" on="saved">
-            {{ __('Saved.') }}
+            {{ __('Salvar.') }}
         </x-jet-action-message>
 
         <x-jet-button wire:loading.attr="disabled" wire:target="photo">
