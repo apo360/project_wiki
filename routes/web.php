@@ -39,9 +39,7 @@ Route::get('/preparatorio', function() {
     return view('apoio_academico.preparatorio');
 })->name('preparatorio');
 
-Route::get('/inscricao', function() {
-    return view('apoio_academico.inscricao');
-})->name('inscricao');
+Route::get('/inscricao', function() { return view('apoio_academico.inscricao'); })->name('inscricao');
 
 Route::get('/explicacoes', [ DisciplinasController::class, 'index'])->name('explicacoes');
 
@@ -53,9 +51,7 @@ Route::get('/explicacoes/{disciplina}/perfil/{id}', [ProfessorController::class,
 
 // *********************** Group :: Colaboradores ***************************
 
-Route::get('/trabalhe_connosco', function() {
-    return view('colaboradores.trabalhe_connosco');
-})->name('trabalhe_connosco');
+Route::get('/trabalhe_connosco', function() { return view('colaboradores.trabalhe_connosco'); })->name('trabalhe_connosco');
 
 Route::get('/parceiros', function() {
     return view('colaboradores.parceiros');
