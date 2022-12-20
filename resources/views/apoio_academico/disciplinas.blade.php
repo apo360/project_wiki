@@ -1,16 +1,4 @@
 
-@include('layouts.header')
-<section>
-    @include('layouts.menu')
-</section>
-
-<style>
-    body{
-        background-color : #ddd;
-    }
-</style>
-
-<body>
     <header>
         <h2>Explicações aqui</h2>
         <form action="" method="get">
@@ -23,17 +11,17 @@
 
     <section>
         @foreach($disciplina as $discip)
-            <div class = "card card-dark">
-                <img src="" alt="">
-                <div class = "card-body">
-                    <h5 class = "card-title">{{ $discip->descricao }}</h5>
-                    <p class = "card-text"> {{ $discip->id }}</p>
-                    <a href="explicacoes/{{ $discip->descricao }}" class = "btn btn-primary">Explore Mais >></a>
-                </div>
+            <div class="posts">
+                <article>
+                    <a href="explicacoes/{{ $discip->descricao }}" class="image">
+                        <img src="images/mat.png" alt="" />
+                    </a>
+                    <h3>{{ $discip->descricao }}</h3>
+                    <p></p>
+                    <ul class="actions">
+                        <li><a href="explicacoes/{{ $discip->descricao }}" class="button">Explore Mais</a></li>
+                    </ul>
+                </article>
             </div>
         @endforeach
     </section>
-
-
-
-</body>

@@ -1,6 +1,3 @@
-@include('layouts.header')
-
-@include('layouts.menu')
 
  <br>
 <hr>
