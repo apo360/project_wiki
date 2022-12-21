@@ -16,7 +16,8 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
 
@@ -27,16 +28,26 @@
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet" /> -->
 
     <!-- responsive style -->
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
 
-    <style>
+    <!-- <link href="{{ asset('e_css/newcss-style.css') }}" rel="stylesheet"> -->
 
-      /* Extra large devices (large laptops and desktops, 1200px and up) */
+    <!-- Customized Bootstrap Stylesheet -->
+    <!-- <link href="new_CSS/style.css" rel="stylesheet"> -->
+    <!-- <link href="new_lib/owl.carousel.min.css" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('css/main.css') }}" rel="stylesheet" />  -->
+
+    <style>
+      .texto{
+      font-style: initial;
+      font-size: 14px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+      /* Extra large devices (large laptops and desktops, 1200px and up) 
       @media only screen and (min-width: 1200px) {
-          /* body {background: pink;} */
           .dropdown:hover .dropdown-menu {
           display: block;
           margin-top: 0;
@@ -45,22 +56,23 @@
 
       header{
         padding: 0px;
-      }
+      }*/
     </style>
 
   </head>
+
   <body class = "antialiased">
     <!-- Inicio do Header (Cabeçalho e Menu) -->
     <header class = "z-index-2">
       <!-- header section strats -->
-      @include('layouts.menu')
+      @include('layouts.menu_principal')
       <!-- end header section -->
     </header>
     <!-- Fim do Header (Cabeçalho e Menu) -->
 
     <section class = "z-index-n1">
-      <div class = "container" id = "PAGE_CONTENT" style = "padding-top: 100px;">
-      
+      <div class = "content" id = "PAGE_CONTENT" style = "padding-top: 100px;" tabindex="0" onclick="closeSidebar()">
+        @include('index_teste')
       </div>
     </section>
  

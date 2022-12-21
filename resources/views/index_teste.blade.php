@@ -1,6 +1,115 @@
 
+<style>
+    
+    .texto{ font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 100px;
+    color:black;}
+    
+    .banner_prof{
+        display:flex;
+        
+        justify-content:center
+    }
+    .button_01{font-family: 'Sarala', sans-serif; 
+
+    background-color:#fad6d6;
+    width: 100px;
+    height: 50px;
+    border: 20px;
+    align-items:start;
+    border-radius: 7px; color: white;
+    box-shadow:#141c2c;
+    
+    
+}
+.button_01:hover{
+
+    background-color: #183b48;
+}
+.texto_01{color:white; 
+    font-family: Georgia;
+}
+</style>
+
+
 <html>
+    
+   <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-dark px-lg-5">
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-sm bg-dark p-0">
+                    <ul class="navbar-nav ml-n2">
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" href="#"> </a>
+                        </li>
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" href="#"></a>
+                        </li>
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body small" href="#"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 text-right d-none d-md-block">
+                <nav class="navbar navbar-expand-sm bg-dark p-0">
+                    <ul class="navbar-nav ml-auto mr-n2">
+                       
+                        <li class="nav-item">
+                            <a class="nav-link text-body" href="https://www.facebook.com/WikLinksAngola"><small class="fab fa-facebook-f"></small></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body" href="https://www.linkedin.com/in/paca-angola-5aa40b253/"><small class="fab fa-linkedin-in"></small></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body" href="https://www.instagram.com/pacangola/"><small class="fab fa-instagram"></small></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><small class="fab fa-google-plus-g"></small></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body" href="#"><small class="fab fa-youtube"></small></a>
+                        </li>
+                        
+                         <li class="nav-item">
+                            <a class="nav-link text-body" href="#"><small class="fab fa-twitter"></small></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
+                    <h1 class="m-0 display-4 text-uppercase text-primary">P.a.c.a<span class="text-secondary font-weight-normal"> o conhecimento num clique</span></h1>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                <a href="#"><img class="img-fluid" src="#" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <div id = "fb-root" ></div> <script async defer crossorigin = " anonymous" src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v15.0&appId= 1244653652234794&autoLogAppEvents=1" nonce = "uFweMhOP" ></script> 
+     
+
 <div id = "fb-root" ></div> <script async defer crossorigin = " anonymous" src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v15.0&appId= 1244653652234794&autoLogAppEvents=1" nonce = "fFjkZSll" ></script> 
      
 <body>
@@ -13,27 +122,21 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="https://www.paca.ao/public/" class="logo" style="color:black;"><strong>P.A.C.A</strong> Plataforma Académica e Ciêntífica de Angola.</a>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/paca-angola-5aa40b253/" class="icon brands fa fa-linkedin"><span class="label">Linkedin</span></a></li>
-										
-										<li><a href="https://www.facebook.com/WikLinksAngola" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://wa.me/+244 942547440" class="icon brands fab fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-						
-								
-									</ul>
+									<a href="https://www.paca.ao/public/" class="logo" style="color:black;"><strong> </a>
 									
 								</header>
-
+                      
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1 class="text_01" style="text-align:center">Serviço de Apoio Académico<br /> </h1>
-											<p class="texto" style="text-align:justify; font-family: 'Sarala', sans-serif; font-weight: 50; font-size: 20px;">   
-                      <img src="images/lapis_animado.png" style="width:70px;" /> <strong>Precisa de Explicação-Orientação ou acompanhamento Académico? Seja Ben-Vindo</strong></p>
+											<h1 class="text_01" style="text-align:center">Serviço de Apoio Académico<br />
+											</h1>
+											<p class="texto" style="text-align:justify; font-family: 'Sarala', sans-serif;
+                                         font-weight: 50;
+                                         font-size: 20px;"> 
+                                         
+                                        <img src="images/lapis_animado.png" style="width:70px;" /> <strong>Precisa de Explicação-Orientação ou acompanhamento Académico? Seja Ben-Vindo</strong></p>
 										</header>
 										<p></p>
 										<ul class="actions">
@@ -49,51 +152,7 @@
 								</section>
 
 							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2 >Especialidades mais procuradas</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Ciências Jurídicas</h3>
-												<p class="texto_1"style="color:black;">Direito-penal,Constitucional,Civil</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Engenharias</h3>
-												<p style="color:black;">Engenharia-Naval,Mecânica,Informática,Electricidade,Programação,Arquitetura,Engenharia Civil..</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Ciências da Saúde</h3>
-												<p style="color:black;">Enfermagem,Clinica-Geral,Pediatria,Farmacologia,Fisioterapia,Neurologia,Estomatologia...</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Ciências da Comunicação</h3>
-												<p style="color:black;">Jornalismo,Redatação.</p>
-											</div>
-										</article>
-									</div>
-								</section>
-
-
-
-
-
-
-
-
-
-
+								
 
 
 
@@ -102,17 +161,14 @@
   <section class="banner_prof">
       
   <div class="ajuda_texto" style="background-color:#f4f4f2;" >
-      <img class="ajuda_imagem" src="images/segue_nos.png" style="width:10%; border-radius:50%;">
+      <img class="ajuda_imagem" src="images/colaborador.jpeg" style="width:10%; border-radius:10%" ;>
       
-    <h1 class="conteudo" style= "text-align:center;font-family: sans-serif; color:red;"> 
-        <img src="images/icon_livro.png" style = " wdith:10px; color:red;">
+    <h1 class="conteudo" style= "text-align:center;font-family: 'Sarala', sans-serif; color:red; "><img  src="images/icon_livro.png" style = "width:10px;color:red;">
         <strong> É professor e quer ter uma renda extra!! seja nosso colaborador
         <ul class="actions">
-					<li><a href="https://www.paca.ao/public/register" class="button_01">Inscrição Grátis</a></li>
-				</ul>
+											<li><a href="https://www.paca.ao/public/register" class="button_01">Inscrição Grátis</a></li>
+										</ul>
     </h1>  
-  <div
-       
   </div>
       
  
@@ -955,8 +1011,6 @@
 
 <!-- course section start -->
 
-
-
   <section class="course_section layout_padding">
 
     <div class="course_bg_box ">
@@ -1096,92 +1150,27 @@
   <!-- course section ends -->
 
   
+  <!-- info section -->
 
-  <!-- contact section -->
-
-  <section class="contact_section layout_padding ">
+<footer class="footer_section">
 
     <div class="container">
 
-      <div class="heading_container">
+      <p>
 
-        <h2>
+        &copy; <span id="displayYear"></span>
 
-          Contacte-nos
+        <a href="https://html.design/"></a>
 
-        </h2>
-
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-6">
-
-          <div class="form_container">
-
-            <form action="">
-
-              <div>
-
-                <input type="text" placeholder="Nome" />
-
-              </div>
-
-              <div>
-
-                <input type="text" placeholder="Telefone" />
-
-              </div>
-
-              <div>
-
-                <input type="email" placeholder="Email" />
-
-              </div>
-
-              <div>
-
-                <input type="text" class="message-box" placeholder="Messagem" />
-
-              </div>
-
-              <div class="btn_box">
-
-                <button>
-
-                  Enviar
-
-                </button>
-
-              </div>
-
-            </form>
-
-          </div>
-
-        </div>
-
-        <div class="col-md-6">
-
-          <div class="map_container">
-
-            <div class="map">
-
-              <div id="googleMap"></div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
+      </p>
 
     </div>
 
-  </section>
+  </footer>
 
-  <!-- end contact section -->
+  <!-- footer section -->
+
+
 
   <!-- jQery -->
 
@@ -1204,9 +1193,147 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 
   <!-- End Google Map -->
+  
+  
+<!-- New_footer -->
 
 
 
+
+
+ <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+        <div class="row py-4">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Encontre-nos</h5>
+                <p class="font-weight-medium"><i class="fa fa-map-marker-alt mr-2"></i>Sequele, Luanda, Angola</p>
+                <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>+244 942 547440</p>
+                <p class="font-weight-medium"><i class="fa fa-envelope mr-2"></i>pacangola@gmail.com</p>
+                <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Siga-nos nas redes sociais</h6>
+                
+                <div class="d-flex justify-content-start">
+                    
+                    
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="https://www.facebook.com/WikLinksAngola"><i class="fab fa-facebook-f"></i></a>
+                    
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="https://www.linkedin.com/in/paca-angola-5aa40b253/"><i class="fab fa-linkedin-in"></i></a>
+                    
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="https://www.instagram.com/pacangola/"><i class="fab fa-instagram"></i></a>
+                    
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    
+                    
+                    
+                    <a class="btn btn-lg btn-secondary btn-lg-square" href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Links Novidades</h5>
+                <div class="mb-3">
+                    <div class="mb-2">
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="https://faa.ao/">Academia Naval</a>
+                        <a class="text-body" href="https://faa.ao/mga/academia_naval"><small>Jan 01, 2022</small></a>
+                    </div>
+                    <a class="small text-body text-uppercase font-weight-medium" href="">Abertura do ano académico 2022/2023 com ingresso de novos cadetes...</a>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-2">
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="https://faa.ao/">Academia Exército</a>
+                        <a class="text-body" href="https://faa.ao/"><small>Jan 01, 2022</small></a>
+                    </div>
+                    <a class="small text-body text-uppercase font-weight-medium" href="https://faa.ao/">Abertura do ano académico 2022/2023 com ingresso de novos cadetes...</a>
+                </div>
+                <div class="">
+                    <div class="mb-2">
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="https://faa.ao/">Academia Fan</a>
+                        <a class="text-body" href="https://faa.ao/"><small>Jan 01, 2022</small></a>
+                    </div>
+                    <a class="small text-body text-uppercase font-weight-medium" href="https://faa.ao/">Abertura do ano académico 2022/2023 com ingresso de novos cadetes...</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categorias</h5>
+                <div class="m-n1">
+                    <a href="" class="btn btn-sm btn-secondary m-1">Marinha</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Comunicação</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Politica</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Negocios</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Treinamento</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Filosofia</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Projectos</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Monografia</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Leitura</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Cinéma</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Orientação</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Explicação</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Automação</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Navegação</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Sociologia</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Direito</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Psicologia</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Saúde</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Arte</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Ciência</a>
+                    <a href="" class="btn btn-sm btn-secondary m-1">Engenharia</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Nosso Team</h5>
+                <div class="row">
+                    <div class="col-4 mb-3">
+                        <a href=""><img class="w-100" src="images/CEO WIK.jpeg" alt=""></a>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <a href=""><img class="w-100" src="img/news-110x110-2.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <a href=""><img class="w-100" src="img/news-110x110-3.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <a href=""><img class="w-100" src="img/news-110x110-4.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <a href=""><img class="w-100" src="img/news-110x110-5.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">&copy; <a href="#">P.A.C.A</a>
+	
+		Plataforma Académica & Ciêntífica de Angola <a href="https://www.paca.ao/public"></a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+   
+   
+
+    <!-- jQery -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+  <!-- bootstrap js -->
+
+  <script src="js/bootstrap.js"></script>
+
+ 
+  <!-- custom js -->
+
+  <script src="js/custom.js"></script>
+ 
+
+    
 </body>
 
 
