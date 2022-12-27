@@ -46,14 +46,7 @@
       font-size: 14px;
       font-family: 'Times New Roman', Times, serif;
     }
-      /* Extra large devices (large laptops and desktops, 1200px and up) 
-      @media only screen and (min-width: 1200px) {
-          .dropdown:hover .dropdown-menu {
-          display: block;
-          margin-top: 0;
-        }
-      }
-
+      /*
       header{
         padding: 0px;
       }*/
@@ -70,9 +63,9 @@
     </header>
     <!-- Fim do Header (Cabeçalho e Menu) -->
 
-    <section class = "z-index-n1">
+    <section class = "z-index-1">
       <div class = "content" id = "PAGE_CONTENT" style = "padding-top: 100px;" tabindex="0" onclick="closeSidebar()">
-        @include('index_teste')
+        
       </div>
     </section>
  
@@ -92,7 +85,6 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 
     <!-- jQery -->
@@ -106,12 +98,12 @@
 
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-    <!-- End Google Map -->
+      
   </body>
 
   <script>
     $(document).ready(function(){
-      $("#mySidebar a").click(function(e){
+      $("#navigation_header a").click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         $('#PAGE_CONTENT').load(href+"#PAGE_CONTENT");
