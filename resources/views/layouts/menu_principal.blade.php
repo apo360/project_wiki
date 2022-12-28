@@ -152,12 +152,154 @@
 </head>
 
 <body>
-    <header class = "cabecalho">
-      <!-- header section strats -->
-        <h2>PACA</h2>
-        <p>O conhecimento em um clique</p>
-      <!-- end header section -->
-    </header>
+  
+  <header>
+    <div class="px-3 py-2 text-bg-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none" :active="request()->routeIs('/')">
+            <img src="images/favicon.png" alt = "Plataforma Academica" class="img_logo_header">
+          </a>
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-secondary">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+                {{__('Apoio Académico')}}
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('explicacoes') }}" >Disciplinas</a></li>
+                    <li><a class="dropdown-item" href="{{ route('preparatorio') }}">Preparatório</a></li>
+                    <li><a class="dropdown-item" href="{{ route('inscricao') }}">{{__('Inscrição Universitária')}}</a> </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
+                {{__('Colaboradores')}}
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                Customers
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto mb-4 mb-lg-0 me-lg-auto" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          @if (Route::has('login'))
+            <div class="">
+                @auth
+                <div class="hidden sm:flex sm:items-center sm:ml-6">
+
+                    <!-- Settings Dropdown -->
+                    <div class="ml-3 relative fixed">
+                        <x-jet-dropdown align="right" width="48">
+                            <x-slot name="trigger">
+                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                                    <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                                        <img class="h-8 w-8 rounded-full object-cover" src="storage/{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                                    </button>
+                                @else
+                                    <span class="inline-flex rounded-md">
+                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                            {{ Auth::user()->name }}
+
+                                            <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </button>
+
+                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                            
+                                            <a href="https://laravel.bigcartel.com" class="ml-1">
+                                                Loja
+                                            </a>
+
+                                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
+                                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                            </svg>
+
+                                        </button>
+                                    </span>
+                                @endif
+
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <!-- Account Management -->
+                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                    {{ __('Configurações de Conta') }}
+                                </div>
+
+                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                    {{ __('Perfil') }}
+                                </x-jet-dropdown-link>
+
+                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                    {{ __('Contactos') }}
+                                </x-jet-dropdown-link>
+
+                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                    {{ __('Carteira') }}
+                                </x-jet-dropdown-link>
+
+                                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                                    <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
+                                        {{ __('API Tokens') }}
+                                    </x-jet-dropdown-link>
+                                @endif
+
+                                <div class="border-t border-gray-100"></div>
+
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}" x-data>
+                                    @csrf
+
+                                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                            @click.prevent="$root.submit();">
+                                        {{ __('Sair') }}
+                                    </x-jet-dropdown-link>
+                                </form>
+                            </x-slot>
+                        </x-jet-dropdown>
+                    </div>
+                </div>
+                @else
+                    <a href="{{ route('login') }}">
+                      <button type="button" class="btn btn-light text-dark me-2">Login</button>
+                    </a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn btn-primary text-navy">Register </a>
+                    @endif
+                @endauth
+            </div>
+          @endif
+        </div>
+      </div>
+    </div>
+  </header>
 
   <nav class="" id="header">
 
@@ -201,101 +343,7 @@
       </a>
       <a href="#">{{__('Anúncios')}}</a>
       <a href="#" class="">{{__('Ajuda')}}</a>
-
-      <div class = "toggleButtonRegisterLogin">
-        @if (Route::has('login'))
-          <div class="hidden top-0 right-0 px-6 py-4 sm:block">
-              @auth
-              <div class="hidden sm:flex sm:items-center sm:ml-6">
-
-                  <!-- Settings Dropdown -->
-                  <div class="ml-3 relative fixed">
-                      <x-jet-dropdown align="right" width="48">
-                          <x-slot name="trigger">
-                              @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                  <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                      <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                  </button>
-                              @else
-                                  <span class="inline-flex rounded-md">
-                                      <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                                          {{ Auth::user()->name }}
-
-                                          <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                          </svg>
-                                      </button>
-
-                                      <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                                          
-                                          <a href="https://laravel.bigcartel.com" class="ml-1">
-                                              Loja
-                                          </a>
-
-                                          <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                          </svg>
-
-                                      </button>
-                                  </span>
-                              @endif
-
-                          </x-slot>
-
-                          <x-slot name="content">
-                              <!-- Account Management -->
-                              <div class="block px-4 py-2 text-xs text-gray-400">
-                                  {{ __('Configurações de Conta') }}
-                              </div>
-
-                              <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                  {{ __('Perfil') }}
-                              </x-jet-dropdown-link>
-
-                              <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                  {{ __('Contactos') }}
-                              </x-jet-dropdown-link>
-
-                              <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                  {{ __('Carteira') }}
-                              </x-jet-dropdown-link>
-
-                              @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                  <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
-                                      {{ __('API Tokens') }}
-                                  </x-jet-dropdown-link>
-                              @endif
-
-                              <div class="border-t border-gray-100"></div>
-
-                              <!-- Authentication -->
-                              <form method="POST" action="{{ route('logout') }}" x-data>
-                                  @csrf
-
-                                  <x-jet-dropdown-link href="{{ route('logout') }}"
-                                          @click.prevent="$root.submit();">
-                                      {{ __('Sair') }}
-                                  </x-jet-dropdown-link>
-                              </form>
-                          </x-slot>
-                      </x-jet-dropdown>
-                  </div>
-              </div>
-              @else
-                  <a href="{{ route('login') }}" class="text-sm text-gray-400 dark:text-gray-200 underline">
-                      Login <i class="fa fa-user" aria-hidden="true"> </i>
-                  </a>
-                  @if (Route::has('register'))
-                      <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-400 dark:text-gray-200 underline">
-                        Register <i class="fa fa-lock" aria-hidden="true"> </i> 
-                      </a>
-                  @endif
-              @endauth
-          </div>
-        @endif
-      </div>
     </div>
-
   </nav>
   
 </body>
