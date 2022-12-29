@@ -1,12 +1,5 @@
 
   <style>
-    *{
-      margin: 0;
-      padding: 0;
-    }
-    body{
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
     /* ---* INICIO MENU *--- */
     .img_logo_header{
       width: 55px;
@@ -149,10 +142,6 @@
     }
   </style>
 
-</head>
-
-<body>
-  
   <header>
     <div class="px-3 py-2 text-bg-dark">
       <div class="container">
@@ -161,48 +150,66 @@
             <img src="images/favicon.png" alt = "Plataforma Academica" class="img_logo_header">
           </a>
 
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small" id="navigation_header">
             <li>
-              <a href="#" class="nav-link text-secondary">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+              <a href="/" class="nav-link text-secondary" :active="request()->routeIs('/')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-houses d-block mx-auto mb-1" viewBox="0 0 16 16">
+                  <path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708L5.793 1Zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708L8.793 2Zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207l-4.5-4.5Z"/>
+                </svg>
                 Home
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                {{__('Apoio Académico')}}
+              <a class="nav-link dropdown-toggle text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-journal-bookmark d-block mx-auto mb-1" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
+                  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                </svg>
+                {{__('Apoio Académico')}}</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('explicacoes') }}" >Disciplinas</a></li>
                     <li><a class="dropdown-item" href="{{ route('preparatorio') }}">Preparatório</a></li>
                     <li><a class="dropdown-item" href="{{ route('inscricao') }}">{{__('Inscrição Universitária')}}</a> </li>
                 </ul>
+              
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people d-block mx-auto mb-1" viewBox="0 0 16 16">
+                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+                  </svg>
+                  Colaboradores</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{{ route ('parceiros') }}" >Parceiros</a></li>
+                  <li><a class="dropdown-item" href="{{ route ('trabalhe_connosco') }}" >Trabalhe Connoscos</a></li>
+                  <li><a class="dropdown-item" href="{{ route('view_recrutamento') }}">Recrutamento</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-newspaper d-block mx-auto mb-1" viewBox="0 0 16 16">
+                  <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                  <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                </svg>
+                {{__('Anúncios')}}
               </a>
             </li>
             <li>
               <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
-                {{__('Colaboradores')}}
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                Customers
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-info-circle d-block mx-auto mb-1" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg>
+                {{__('Ajuda')}}
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap justify-content-center">
+    <div class="px-3 py-2 border-bottom mb-3" style="background-color: #ddd;">
+      <div class="container d-flex flex-wrap justify-content-center" >
         <form class="col-12 col-lg-auto mb-4 mb-lg-0 me-lg-auto" role="search">
           <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
         </form>
@@ -291,7 +298,7 @@
                       <button type="button" class="btn btn-light text-dark me-2">Login</button>
                     </a>
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="btn btn-primary text-navy">Register </a>
+                        <a href="{{ route('register') }}" class="btn btn-primary text-navy">Regista-se </a>
                     @endif
                 @endauth
             </div>
@@ -300,53 +307,6 @@
       </div>
     </div>
   </header>
-
-  <nav class="" id="header">
-
-    <button class="btn_icon_header" onclick="toggleSidebar()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
-    </button>
-
-    <div class="logo_header">
-      <a class="navbar-brand" href="/" :active="request()->routeIs('/')">
-        <img src="images/favicon.png" alt = "Plataforma Academica" class="img_logo_header">
-      </a>
-    </div>
-
-    <div class="navigation_header " id="navigation_header">
-
-      <button class="btn_icon_header" onclick="toggleSidebar()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-          <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-        </svg>
-      </button>
-
-      <a href="/" :active="request()->routeIs('/')" > Home </a>
-
-      <a class="nav-link dropdown dropdown-toggle" role="button" data-bs-toggle="dropdown"> <i class="fa fa-graduation-cap"> </i> {{__('Apoio Académico')}}
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{ route('explicacoes') }}">Disciplinas</a>
-            <a class="dropdown-item" href="{{ route('preparatorio') }}">Preparatório</a>
-            <a class="dropdown-item" href="{{ route('inscricao') }}">{{__('Inscrição Universitária')}}</a>
-        </div>
-      </a>
-
-      <a class="nav-link dropdown dropdown-toggle" role="button" data-bs-toggle="dropdown"> <i class="fa fa-users"> </i>{{__('Colaboradores')}}
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{ route ('parceiros') }}" >Parceiros</a>
-            <a class="dropdown-item" href="{{ route ('trabalhe_connosco') }}" >Trabalhe Connoscos</a>
-            <a class="dropdown-item" href="{{ route('view_recrutamento') }}">Recrutamento</a>
-        </div>
-      </a>
-      <a href="#">{{__('Anúncios')}}</a>
-      <a href="#" class="">{{__('Ajuda')}}</a>
-    </div>
-  </nav>
-  
-</body>
 
 <script>
   var header = document.getElementById('header');

@@ -50,16 +50,9 @@
             <input id="procurar" onkeyup="myFunction()" class="input_search_disp" type="text" name="procurar" placeholder = "Insira a disciplina desejada" autofocus />
         </header>
         <div class="row row-cols-md-6">
-            <ul id="myUL">
-                @foreach($disciplina as $discip)
-                <li >
-                    <a href="#">{{ $discip->descricao }}</a>     
-                </li>
-                @endforeach
-            </ul>
             @foreach($disciplina as $discip)
-                <div class="col">
-                    <div class="card_disp">
+                <div class="col" id="myUL">
+                    <div class="card_disp" id="lis">
                         <img src="images/mat.png" class="card-img-top img-thumbnail" alt="..." style = "width: 340px;" />
                         <div class="card-body">
                             <h5 class="card-title">
@@ -81,9 +74,9 @@ function myFunction() {
     input = document.getElementById("procurar");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
+    li = ul.getElementsById("lis");
     for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
+        a = li[i].getElementsByTagName("span")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
