@@ -244,6 +244,86 @@
       }
     }
 
+    section.team{
+      margin: 60px 60px 30px 60px;
+      background: transparent;
+      flex-direction: row;
+    }
+
+    section.team .grup-button{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 30px;
+      margin-top: 30px;
+      gap: 5rem;
+      border-bottom: 2px solid #ddd;
+    }
+
+    section.team .title_equipe{
+
+      margin-top: 20px;
+      margin-bottom: 50px;
+      font-size: 40px;
+      font-style: oblique;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-decoration: wavy;
+
+    }
+
+    section.team span{
+
+      font-style: bold;
+      font-size: 25px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-decoration: wavy;
+      margin-bottom: 10px;
+    }
+
+    .equipe_card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2.5rem;
+      gap: 1rem;
+    }
+
+    .first{
+      margin-top: 30px;
+      border-bottom: 2px solid blue;
+      box-shadow: 20px 20px 50px -30px cyan;
+    }
+    .second{
+      margin-top: 100px;
+      border-bottom: 2px solid #ddd;
+      box-shadow: 20px 20px 50px -30px #ddd;
+    }
+
+    .third{
+      margin-top: 10px;
+      border-bottom: 2px solid lightgreen;
+      box-shadow: 20px 20px 50px -30px lightgreen;
+    }
+
+    .four{
+      margin-top: 200px;
+      border-bottom: 2px solid yellow;
+    }
+
+
+    .img-user{
+      width: 160px;
+      border-radius: 50%;
+    }
+
+    .row{
+      gap: 3rem;
+    }
+    .card{
+      border: none;
+    }
+
     </style>
 
   </head>
@@ -302,14 +382,6 @@
         <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
             <div class="containers">
                 <div class="row">
-                    <!-- counter -->
-                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
-                        <i class="fa fa-eye medium-icon" style="color: yellowgreen;"> </i>
-                        <span id="anim-number-pizza" class="counter-number"></span>
-                        <span class="timer counter alt-font appear" data-to="980" data-speed="7000">2800</span>
-                        <p class="counter-title">Visualizaçoes</p>
-                    </div>
-                    <!-- end counter -->
                     <!-- counter -->
                     <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
                         <i class="fa fa-graduation-cap medium-icon" style="color: orangered;"></i>
@@ -375,55 +447,97 @@
           
       </section>
       <section class="team">
-        <span>Equipa</span>
+        <span class = "title_equipe">Nosso Team</span>
         <div class="row">
           <div class="col-md-3 first">
             <div class="card card-dark">
-              <div class="card-header"><div class="title-card"><p>CEO</p></div></div>
-              <img src="..." class="card-img-top rounded" alt="...">
+              <div class="card-header" style = "background-color: cyan;"><div class="title-card"><p>CEO</p></div></div>
+              <div class = "equipe_card">
+              <img src="images/user.png" class="card-img-top img-user" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Wik Kapacete</h5>
                 <span>Engenheiro</span>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
               </div>
             </div>
           </div>
 
           <div class="col-md-3 second">
           <div class="card card-dark">
-              <div class="card-header"><div class="title-card"><p>PROGRAMADOR</p></div></div>
-              <img src="..." class="card-img-top rounded" alt="...">
+              <div class="card-header" style = "background-color: #ddd;"><div class="title-card"><p>PROGRAMADOR</p></div></div>
+              <div class = "equipe_card">
+              <img src="images/user.png" class="card-img-top img-user" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Apolinário Ernesto</h5>
                 <span>Engenheiro</span>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
               </div>
+              </div>
+              
             </div>
           </div>
 
           <div class="col-md-3 third">
-          <div class="card card-dark">
-              <div class="card-header"><div class="title-card"><p>TECNICOS</p></div></div>
-              <img src="..." class="card-img-top rounded" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Carlos Sobral</h5>
-                <span>Engenheiro</span>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card card-dark">
+              <div class="card-header" style = "background-color: lightgreen;"><div class="title-card"><p>TECNICOS</p></div></div>
+              <div class = "equipe_card">
+                <img src="images/user.png" class="card-img-top img-user" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Carlos Sobral</h5>
+                  <span>Engenheiro</span>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
               </div>
 
-              <img src="..." class="card-img-top rounded" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Delson Raimundo</h5>
-                <span>Engenheiro</span>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class = "equipe_card">
+                <img src="images/user.png" class="card-img-top img-user" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Delson Raimundo</h5>
+                  <span>Engenheiro</span>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
               </div>
+
             </div>
           </div>
 
-          <div class="col-md-3 four"></div>
+          <div class="col-md-2 four">
+            <div class="card card-dark">
+              <div class="card-header" style = "background-color: yellow;"><div class="title-card"><p>COLABORADORES</p></div></div>
+              
+            </div>
+          </div>
         </div>
+
+        <div class="grup-button">
+          <a href="">
+          <button class="btn btn-warning">
+              Saiba Mais sobre nós
+            </button>
+          </a>
+          <a href="">
+            <button class="btn btn-primary">
+              Inscreva-se Gratuitamente
+            </button>
+          </a>
+        </div>
+
       </section>
-      <section>4</section>
+      <section class = "comentario">
+        <span class = "title_equipe">Comentários</span>
+        
+      </section>
     </div>
 
 
