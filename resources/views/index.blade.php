@@ -75,54 +75,54 @@
     }
 
     .css-i3qo6r {
-  color: #1f1f1f;
-  font-size: 5.25rem;
-  line-height: 5.75rem;
-  font-family: "Source Sans Pro",Arial,sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-}
+      color: #1f1f1f;
+      font-size: 5.25rem;
+      line-height: 5.75rem;
+      font-family: "Source Sans Pro",Arial,sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
 
-.css-16ln3yv {
-  color: #1f1f1f;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "Source Sans Pro",Arial,sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.1px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
+    .css-16ln3yv {
+      color: #1f1f1f;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-family: "Source Sans Pro",Arial,sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.1px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
 
-.image_front {
-  height: 497px;
-  width: 459px;
-  margin-bottom: 32px;
-  margin-right: 24px;
-  margin-top: 32px;
-}
+    .image_front {
+      height: 497px;
+      width: 459px;
+      margin-bottom: 32px;
+      margin-right: 24px;
+      margin-top: 32px;
+    }
 
-img {
-  vertical-align: middle;
-}
+    img {
+      vertical-align: middle;
+    }
 
-.css-rpf906 {
-  background-color: transparent;
-  color: #1f1f1f;
-}
+    .css-rpf906 {
+      background-color: transparent;
+      color: #1f1f1f;
+    }
 
-.css-12519x1 {
-  margin-top: 50px;
-  max-width: 559px;
-max-height: 597px;
-margin-left: auto;
-margin-right: auto;
-border-radius: 0% 30%;
-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+    .css-12519x1 {
+      margin-top: 50px;
+      max-width: 559px;
+    max-height: 597px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0% 30%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
 
-.icon_social{
-  -webkit-align-items: center;
+    .icon_social{
+      -webkit-align-items: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
@@ -135,31 +135,115 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
       -webkit-justify-content: center;
       justify-content: center;
       background-color: lightskyblue;
-    gap: 1em;
-}
+      gap: 1em;
+    }
 
-.icon_social a{
-  text-align: center;
-}
+    .icon_social a{
+      text-align: center;
+    }
 
-.containers{
-    padding: 20px;
-    margin:0px 250px 0px 350px;
-    opacity: .5;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: none;
-}
+    .containers{
+        padding: 20px;
+        margin:0px 250px 0px 350px;
+        opacity: .5;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background: transparent;
+    }
 
-.medium-icon { font-size: 30px !important; margin-bottom: 15px !important;} 
-.counter-section i { display:block; margin:0 0 10px}
-.counter-section span.counter { font-size:30px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
-.counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
-.counter-icon {top:25px; position:relative}
-.counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
-.counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
-.counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
-.counter-subheadline span {float: right;}  
+    .medium-icon { font-size: 30px !important; margin-bottom: 15px !important;} 
+    .counter-section i { display:block; margin:0 0 10px}
+    .counter-section span.counter { font-size:30px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
+    .counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
+    .counter-icon {top:25px; position:relative}
+    .counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+    .counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+    .counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+    .counter-subheadline span {float: right;}  
+
+    .servicos{ 
+      margin: 60px 0px 30px 0px; 
+      background-color: #F6F9FF;
+      display: flex;
+      justify-content: center;
+      color: #434343;
+      width: 100%;
+    }
+
+    .servicos h2{
+      font-size: 40px;
+      font-style: oblique;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-decoration: wavy;
+      margin-top: 35px;
+    }
+
+    main.cards{
+      display: flex;
+      padding: 38px;
+    }
+
+    main.cards section.card_{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2.5rem;
+      border-radius: 8px;
+      max-height: 456px;
+      margin-left: 32px;
+      gap: 1.5rem;
+      margin-top: 64px;
+    }
+
+    main.cards section.card_ .icon{
+      width: 128px;
+      height: 128px;
+    }
+
+    main.cards section.card_ img{
+      width: 100%;
+    }
+
+    main.cards section.card_ button{
+      padding: 0.5rem;
+      text-transform: uppercase;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 80%;
+      font-weight: 500;
+    }
+
+    main.cards section.card_.explicacoes{
+      box-shadow: 20px 20px 50px -30px lightskyblue;
+    }
+
+    main.cards section.card_.trabalho{
+      box-shadow: 20px 20px 50px -30px lightsalmon;
+    }
+
+    main.cards section.card_.preparatorio{
+      box-shadow: 20px 20px 50px -30px darkgray;
+    }
+
+    main.cards section.card_.formacao{
+      box-shadow: 20px 20px 50px -30px darksalmon;
+    }
+
+    main.cards section.card_ span{
+      font-weight: 300;
+      max-width: 240px;
+      font-size: 80%;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 750px){
+      main.cards{
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
     </style>
 
   </head>
@@ -202,17 +286,16 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
 
       </div>
       <section class="css-rpf906">
-        <div class="sec_1">
-          <div class="text_button">
+        <div class="sec_1 row">
+          <div class="text_button col-md-6">
             <h1 class="css-i3qo6r" >Serviço de Apoio Académico</h1>
-            <p class="css-16ln3yv">Precisa de Explicação-Orientação ou acompanhamento Académico? <br>
-               Seja Bem-Vindo</p>
+            <p class="css-16ln3yv">Precisa de Explicação-Orientação ou acompanhamento Académico? <br> Seja Bem-Vindo</p>
             <button class="btn btn-primary">
-              <span class="btn btn-primary">Inscreva-se Gratuitamente</span> </button>
-            <button></button>
+              <span class="btn btn-primary">Inscreva-se Gratuitamente</span> 
+            </button>
           </div>
 
-          <div class="image_front">
+          <div class="image_front col-md-6">
             <img class="css-12519x1" src="images/c1.jpeg" alt="">
           </div>
         </div>
@@ -252,8 +335,95 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
             </div>
         </section>
       </section>
-      <section>2</section>
-      <section>3</section>
+      <section class="servicos">
+        <h2> Nossos Serviços</h2>
+          <main class="cards">
+              <section class="card_ explicacoes">
+                  <div class="icon">
+                    <img src="images/Explicacoes.png" alt="">
+                  </div>
+                  <h3>Explicações</h3>
+                  <span>Temos para sí assistência especializada para cada área académica</span>
+                  <button class="btn-primary">Ver Mais</button>
+              </section>
+              <section class="card_ trabalho">
+                  <div class="icon">
+                    <img src="images/trabalho_academico.jpg" alt="">
+                  </div>
+                  <h3>Trabalhos Acadêmicos</h3>
+                  <span>Relatórios, Monografias, Dissertações e mais ...</span>
+                  <button class="btn-primary">Saiba Mais</button>
+              </section>
+              <section class="card_ preparatorio">
+                  <div class="icon">
+                    <img src="images/preparatorio.jpeg" alt="">
+                  </div>
+                  <h3>Preparatório</h3>
+                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <button class="btn-primary">Saiba Mais</button>
+              </section>
+
+              <section class="card_ formacao">
+                  <div class="icon">
+                    <img src="images/Formacao.png" alt="">
+                  </div>
+                  <h3>Formações</h3>
+                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <button class="btn-primary">Saiba Mais</button>
+              </section>
+          </main>
+          
+      </section>
+      <section class="team">
+        <span>Equipa</span>
+        <div class="row">
+          <div class="col-md-3 first">
+            <div class="card card-dark">
+              <div class="card-header"><div class="title-card"><p>CEO</p></div></div>
+              <img src="..." class="card-img-top rounded" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Wik Kapacete</h5>
+                <span>Engenheiro</span>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 second">
+          <div class="card card-dark">
+              <div class="card-header"><div class="title-card"><p>PROGRAMADOR</p></div></div>
+              <img src="..." class="card-img-top rounded" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apolinário Ernesto</h5>
+                <span>Engenheiro</span>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 third">
+          <div class="card card-dark">
+              <div class="card-header"><div class="title-card"><p>TECNICOS</p></div></div>
+              <img src="..." class="card-img-top rounded" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Carlos Sobral</h5>
+                <span>Engenheiro</span>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+
+              <img src="..." class="card-img-top rounded" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Delson Raimundo</h5>
+                <span>Engenheiro</span>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 four"></div>
+        </div>
+      </section>
+      <section>4</section>
     </div>
 
 
