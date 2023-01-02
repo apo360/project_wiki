@@ -80,32 +80,9 @@
                     <a href="" class="btn btn-sm btn-secondary m-1">Engenharia</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Nosso Team</h5>
-                <div class="row">
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="images/CEO WIK.jpeg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-5.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="img/news-110x110-1.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111; color:aliceblue">
         <p class="m-0 text-center">&copy; <a href="#">P.A.C.A</a> Plataforma Académica & Ciêntífica de Angola <a href="https://www.paca.ao"></a></p>
     </div>
     <!-- Footer End -->

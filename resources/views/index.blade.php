@@ -44,289 +44,343 @@
       font-style: initial;
       font-size: 14px;
       font-family: 'Times New Roman', Times, serif;
-    }
-    body {
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      min-height: 75rem;
-      padding-top: 8.5rem;
-    }
+      }
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        min-height: 75rem;
+        padding-top: 8.5rem;
+      }
 
-    #PAGE_CONTENT{
-      margin: 7.6px 5px 7px 7px;
-    }
+      #PAGE_CONTENT{
+        margin: 7.6px 5px 7px 7px;
+      }
 
-    .sec_1{
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      margin: 0px auto;
-      max-width: 1400px;
-      position: relative;
-      width: 100%;
-    }
+      .sec_1{
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        margin: 0px auto;
+        max-width: 1400px;
+        position: relative;
+        width: 100%;
+      }
 
-    .css-i3qo6r {
-      color: #1f1f1f;
-      font-size: 5.25rem;
-      line-height: 5.75rem;
-      font-family: "Source Sans Pro",Arial,sans-serif;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-    }
+      .css-i3qo6r {
+        color: #1f1f1f;
+        font-size: 4.25rem;
+        line-height: 5.75rem;
+        font-family: "Source Sans Pro",Arial,sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+      }
 
-    .css-16ln3yv {
-      color: #1f1f1f;
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-      font-family: "Source Sans Pro",Arial,sans-serif;
-      font-weight: 400;
-      letter-spacing: -0.1px;
-      margin-top: 24px;
-      margin-bottom: 24px;
-    }
+      .css-16ln3yv {
+        color: #1f1f1f;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-family: "Source Sans Pro",Arial,sans-serif;
+        font-weight: 400;
+        letter-spacing: -0.1px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .image_front {
-      height: 497px;
-      width: 459px;
-      margin-bottom: 32px;
-      margin-right: 24px;
-      margin-top: 32px;
-    }
+      .title{
+        font-size: 30px;
+        line-height: 100px;
+        font-weight: bold;
+        height: 100px;
+        text-align: left;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        overflow: hidden;
+      }
 
-    img {
-      vertical-align: middle;
-    }
+      .slide-text{
+        color: #ffc107;
+        margin-left: 12px;
+        box-sizing: border-box;
+        animation: slider 6s linear infinite;
+      }
 
-    .css-rpf906 {
-      background-color: transparent;
-      color: #1f1f1f;
-    }
+      @keyframes slider {
+        0%{ margin-top: -200px;}
+        30%{ margin-top: -200px;}
+        35%{ margin-top: 0px;}
+        65%{ margin-top: 0px;}
+        70%{ margin-top: 200px;}
+        100%{ margin-top: 200px;}
+      }
 
-    .css-12519x1 {
-      margin-top: 50px;
-      max-width: 559px;
-    max-height: 597px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0% 30%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
+      .image_front {
+        height: 497px;
+        width: 459px;
+        margin-bottom: 32px;
+        margin-right: 24px;
+        margin-top: 32px;
+      }
 
-    .icon_social{
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      background-color: lightskyblue;
-      gap: 1em;
-    }
+      img {
+        vertical-align: middle;
+      }
 
-    .icon_social a{
-      text-align: center;
-    }
+      .css-rpf906 {
+        background-color: transparent;
+        color: #1f1f1f;
+      }
 
-    .containers{
-        padding: 20px;
-        margin:0px 250px 0px 350px;
-        opacity: .5;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        background: transparent;
-    }
+      .css-12519x1 {
+        margin-top: 50px;
+        max-width: 559px;
+      max-height: 597px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0% 30%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
 
-    .medium-icon { font-size: 30px !important; margin-bottom: 15px !important;} 
-    .counter-section i { display:block; margin:0 0 10px}
-    .counter-section span.counter { font-size:30px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
-    .counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
-    .counter-icon {top:25px; position:relative}
-    .counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
-    .counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
-    .counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
-    .counter-subheadline span {float: right;}  
+      .icon_social{
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: lightskyblue;
+        gap: 1em;
+      }
 
-    .servicos{ 
-      margin: 60px 0px 30px 0px; 
-      background-color: #F6F9FF;
-      display: flex;
-      justify-content: center;
-      color: #434343;
-      width: 100%;
-    }
+      .icon_social a{
+        text-align: center;
+      }
 
-    .servicos h2{
-      font-size: 40px;
-      font-style: oblique;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      text-decoration: wavy;
-      margin-top: 35px;
-    }
+      .containers{
+          padding: 20px;
+          margin:0px 250px 0px 350px;
+          opacity: .5;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          background: transparent;
+      }
 
-    main.cards{
-      display: flex;
-      padding: 38px;
-    }
+      .medium-icon { font-size: 30px !important; margin-bottom: 15px !important;} 
+      .counter-section i { display:block; margin:0 0 10px}
+      .counter-section span.counter { font-size:30px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
+      .counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
+      .counter-icon {top:25px; position:relative}
+      .counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+      .counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+      .counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+      .counter-subheadline span {float: right;}  
 
-    main.cards section.card_{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 3rem 2.5rem;
-      border-radius: 8px;
-      max-height: 456px;
-      margin-left: 32px;
-      gap: 1.5rem;
-      margin-top: 64px;
-    }
+      .servicos{ 
+        margin: 60px 0px 30px 0px; 
+        background-color: #F6F9FF;
+        display: flex;
+        justify-content: center;
+        color: #434343;
+        width: 100%;
+      }
 
-    main.cards section.card_ .icon{
-      width: 128px;
-      height: 128px;
-    }
+      .servicos h2{
+        font-size: 40px;
+        font-style: oblique;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration: wavy;
+        margin-top: 35px;
+      }
 
-    main.cards section.card_ img{
-      width: 100%;
-    }
-
-    main.cards section.card_ button{
-      padding: 0.5rem;
-      text-transform: uppercase;
-      border-radius: 16px;
-      cursor: pointer;
-      font-size: 80%;
-      font-weight: 500;
-    }
-
-    main.cards section.card_.explicacoes{
-      box-shadow: 20px 20px 50px -30px lightskyblue;
-    }
-
-    main.cards section.card_.trabalho{
-      box-shadow: 20px 20px 50px -30px lightsalmon;
-    }
-
-    main.cards section.card_.preparatorio{
-      box-shadow: 20px 20px 50px -30px darkgray;
-    }
-
-    main.cards section.card_.formacao{
-      box-shadow: 20px 20px 50px -30px darksalmon;
-    }
-
-    main.cards section.card_ span{
-      font-weight: 300;
-      max-width: 240px;
-      font-size: 80%;
-      margin-bottom: 16px;
-    }
-
-    @media screen and (max-width: 750px){
       main.cards{
+        display: flex;
+        padding: 38px;
+      }
+
+      main.cards section.card_{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 2.5rem;
+        border-radius: 8px;
+        max-height: 456px;
+        margin-left: 32px;
+        gap: 1.5rem;
+        margin-top: 64px;
+      }
+
+      main.cards section.card_ .icon{
+        width: 128px;
+        height: 128px;
+      }
+
+      main.cards section.card_ img{
+        width: 100%;
+      }
+
+      main.cards section.card_ button{
+        padding: 0.5rem;
+        text-transform: uppercase;
+        border-radius: 16px;
+        cursor: pointer;
+        font-size: 80%;
+        font-weight: 500;
+      }
+
+      main.cards section.card_.explicacoes{
+        box-shadow: 20px 20px 50px -30px lightskyblue;
+      }
+
+      main.cards section.card_.trabalho{
+        box-shadow: 20px 20px 50px -30px lightsalmon;
+      }
+
+      main.cards section.card_.preparatorio{
+        box-shadow: 20px 20px 50px -30px darkgray;
+      }
+
+      main.cards section.card_.formacao{
+        box-shadow: 20px 20px 50px -30px darksalmon;
+      }
+
+      main.cards section.card_ span{
+        font-weight: 300;
+        max-width: 240px;
+        font-size: 80%;
+        margin-bottom: 16px;
+      }
+
+      @media screen and (max-width: 750px){
+        main.cards{
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+
+      section.team{
+        margin: 60px 60px 30px 60px;
+        background: transparent;
+        flex-direction: row;
+      }
+
+      section.team .grup-button{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 30px;
+        margin-top: 30px;
+        gap: 5rem;
+        border-bottom: 2px solid #ddd;
+      }
+
+      section.team .title_equipe{
+
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-size: 40px;
+        font-style: oblique;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration: wavy;
+
+      }
+
+      section.team span{
+
+        font-style: bold;
+        font-size: 25px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration: wavy;
+        margin-bottom: 10px;
+      }
+
+      .equipe_card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 2.5rem;
         gap: 1rem;
       }
-    }
 
-    section.team{
-      margin: 60px 60px 30px 60px;
-      background: transparent;
-      flex-direction: row;
-    }
+      .first{
+        margin-top: 30px;
+        border-bottom: 2px solid blue;
+        box-shadow: 20px 20px 50px -30px cyan;
+      }
+      .second{
+        margin-top: 100px;
+        border-bottom: 2px solid #ddd;
+        box-shadow: 20px 20px 50px -30px #ddd;
+      }
 
-    section.team .grup-button{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      padding: 30px;
-      margin-top: 30px;
-      gap: 5rem;
-      border-bottom: 2px solid #ddd;
-    }
+      .third{
+        margin-top: 10px;
+        border-bottom: 2px solid lightgreen;
+        box-shadow: 20px 20px 50px -30px lightgreen;
+      }
 
-    section.team .title_equipe{
-
-      margin-top: 20px;
-      margin-bottom: 50px;
-      font-size: 40px;
-      font-style: oblique;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      text-decoration: wavy;
-
-    }
-
-    section.team span{
-
-      font-style: bold;
-      font-size: 25px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      text-decoration: wavy;
-      margin-bottom: 10px;
-    }
-
-    .equipe_card{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 3rem 2.5rem;
-      gap: 1rem;
-    }
-
-    .first{
-      margin-top: 30px;
-      border-bottom: 2px solid blue;
-      box-shadow: 20px 20px 50px -30px cyan;
-    }
-    .second{
-      margin-top: 100px;
-      border-bottom: 2px solid #ddd;
-      box-shadow: 20px 20px 50px -30px #ddd;
-    }
-
-    .third{
-      margin-top: 10px;
-      border-bottom: 2px solid lightgreen;
-      box-shadow: 20px 20px 50px -30px lightgreen;
-    }
-
-    .four{
-      margin-top: 200px;
-      border-bottom: 2px solid yellow;
-    }
+      .four{
+        margin-top: 200px;
+        border-bottom: 2px solid yellow;
+      }
 
 
-    .img-user{
-      width: 160px;
-      border-radius: 50%;
-    }
+      .img-user{
+        width: 80px;
+        border-radius: 50%;
+      }
 
-    .row{
-      gap: 3rem;
-    }
-    .card{
-      border: none;
-    }
+      .row{
+        gap: 3rem;
+        margin-left: 200px;
+      }
+      .card{
+        border: none;
+      }
 
+      section.comentario{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        background-color: #f4f9f4; 
+      }
+
+      section.comentario .title_equipe{
+
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-size: 40px;
+        font-style: oblique;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration: wavy;
+        margin: 60px 10px 30px 60px;
+
+      }
+
+      .col-md-3{
+        max-width: 436px;
+      }
     </style>
-
   </head>
+
   <body>
 
     <!-- Inicio do Header (Cabeçalho e Menu) -->
@@ -368,8 +422,16 @@
       <section class="css-rpf906">
         <div class="sec_1 row">
           <div class="text_button col-md-6">
-            <h1 class="css-i3qo6r" >Serviço de Apoio Académico</h1>
-            <p class="css-16ln3yv">Precisa de Explicação-Orientação ou acompanhamento Académico? <br> Seja Bem-Vindo</p>
+            <h3 class="css-i3qo6r" >Serviço de Apoio Académico</h3>
+              <div class="title">
+                Precisas de
+                <div class="slide-text">
+                  <div>Explicação</div>
+                  <div>Acompanhamento Académico</div>
+                  <div>Orientação</div>
+                </div>
+              </div>
+
             <button class="btn btn-primary">
               <span class="btn btn-primary">Inscreva-se Gratuitamente</span> 
             </button>
@@ -407,6 +469,7 @@
             </div>
         </section>
       </section>
+
       <section class="servicos">
         <h2> Nossos Serviços</h2>
           <main class="cards">
@@ -444,8 +507,8 @@
                   <button class="btn-primary">Saiba Mais</button>
               </section>
           </main>
-          
       </section>
+      
       <section class="team">
         <span class = "title_equipe">Nosso Team</span>
         <div class="row">
@@ -535,13 +598,39 @@
 
       </section>
       <section class = "comentario">
-        <span class = "title_equipe">Comentários</span>
-        
+        <span class = "title_equipe">O que os nossos Clientes dizem.</span>
+        <div class="container marketing">
+          <!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+              <h2 class="fw-normal">Heading</h2>
+              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+              <h2 class="fw-normal">Heading</h2>
+              <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+              <h2 class="fw-normal">Heading</h2>
+              <p>And lastly this, the third column of representative placeholder content.</p>
+              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+              <h2 class="fw-normal">Heading</h2>
+              <p>And lastly this, the third column of representative placeholder content.</p>
+              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
       </section>
     </div>
 
-
- 
     <!-- Inicio do Rodapé (Info para todas as páginas) -->
     <section class = "">
       <footer class="footer_section"> 

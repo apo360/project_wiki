@@ -1,89 +1,220 @@
 
 <style>
-    .conteiner{
-        margin: none;
+
+    section.dispclinas{
+        background-color: #F6F9FF;
+        justify-content: center;
+        color: #434343;
+        width: 100%;
+    }
+
+    section.dispclinas .cards_disp, .localidades{
+        margin-right: 350px;
+        margin-left: 350px;
         background-color: #ddd;
-        position: static;
+        padding-bottom: 38px;
+        margin-bottom: 10px;
     }
 
-    img{
-        width: 500px;
-        height: 100%;
+    section.dispclinas form{
+        margin-bottom: 5px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-content: center;
+        gap: 1rem;
     }
 
-    .body_disp{
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-
-    .card_disp
-    {
-        position: static;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: #fff;
-        background-clip: border-box;
-        border: 1px solid rgba(0, 0, 0, 0.125);
-        border-radius: 0.25rem;
-        margin: 5px;
-    }
-
-    .input_search_disp{
-
-        border: thick double #32a1ce;
-        border-radius: 15px;
-        margin-bottom: 20px;
+    section.dispclinas label{
         margin-top: 20px;
-        width: 70%;
+        font-size: 20px;
+        color: #434343;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    section.dispclinas input{
+        border-radius: 8px;
+        margin-bottom: 15px;
+        background: transparent;
+    }
+
+    .row{
+        gap: 0;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 </style>
 
-<div class="conteiner">
-    <!-- <img src="images/banner-educacao.png" alt="..."> -->
+<section class="container">
+    
+    <div class="">
+        <form action="" method="post">
+            <label for="procurar">Pesquise as disciplinas.</label>
+            <input id="procurar" class="input_search_disp form-control" type="text" name="procurar" placeholder = "Insira a disciplina desejada" autofocus list="list_disciplina"/>
+            <datalist id="list_disciplina" class="resultado_nome_cliente">
+                @foreach($disciplina as $discip)
+                    <option value="{{ $discip->descricao }}" label="{{ $discip->descricao }}">
+                @endforeach
+            </datalist>
+        </form>
 
-    <section class="body_disp">
-        <header>
-            <input id="procurar" onkeyup="myFunction()" class="input_search_disp" type="text" name="procurar" placeholder = "Insira a disciplina desejada" autofocus />
-        </header>
-        <div class="row row-cols-md-6">
-            @foreach($disciplina as $discip)
-                <div class="col" id="myUL">
-                    <div class="card_disp" id="lis">
-                        <img src="images/mat.png" class="card-img-top img-thumbnail" alt="..." style = "width: 340px;" />
+        <div class="">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Matemática</div>
                         <div class="card-body">
-                            <h5 class="card-title">
-                                <span>{{ $discip->descricao }}</span>
-                            </h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <a href="explicacoes/{{ $discip->descricao }}" class="btn btn-primary">Explore Mais</a>
+                            <img src="images/mat.png" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Matemática" class="btn btn-primary">Explore Mais</a>
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
-    </section>
-</div>
 
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("procurar");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsById("lis");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("span")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Francês</div>
+                        <div class="card-body">
+                            <img src="images/frances.png" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Francês" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Inglês</div>
+                        <div class="card-body">
+                            <img src="images/Ingles.jpg" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Inglês" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Informática</div>
+                        <div class="card-body">
+                            <img src="images/info.png" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Informática" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Programação</div>
+                        <div class="card-body">
+                            <img src="images/programacao.jpg" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Programação" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Química</div>
+                        <div class="card-body">
+                            <img src="images/quimica.png" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Química" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Física</div>
+                        <div class="card-body">
+                            <img src="images/fisi.png" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Física" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-dark">
+                        <div class="card-header">Estudo do meio</div>
+                        <div class="card-body">
+                            <img src="images/mat.png" alt="" style="width: 1080px; height: 270px;">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Estudo do meio" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <form action="" method="post">
+            <label for="localidade">Encontre o explicador mais próximo de si.</label>
+            <input id="localidade" class="input_search_localidade" type="text" name="localidade" placeholder = "Insira a disciplina desejada" autofocus list="list_disciplina"/>
+            <datalist id="list_disciplina" class="resultado_nome_cliente">
+                @foreach($disciplina as $discip)
+                    <option value="{{ $discip->descricao }}" label="{{ $discip->descricao }}">
+                @endforeach
+            </datalist>
+        </form>
+
+        <div class="body-cidade">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-dark">
+                        <div class="card-header">Luanda</div>
+                        <div class="card-body">
+                            <img src="images/luanda.webp" alt="">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Luanda" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card card-dark">
+                        <div class="card-header">Lobito</div>
+                        <div class="card-body">
+                            <img src="images/luanda.webp" alt="">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Lobito" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card card-dark">
+                        <div class="card-header">Soyo</div>
+                        <div class="card-body">
+                            <img src="images/luanda.webp" alt="">
+                        </div>
+                        <div class="card-footer">
+                            <a href="explicacoes/Soyo" class="btn btn-primary">Explore Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
     
