@@ -94,8 +94,6 @@ Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'ShowUs
 
 Route::post('/colaboradores/recrutamento', [\App\Http\Controllers\RecrutamentoController::class, 'store'])->name('recrutamento');
 
-Route::get('/repositorio', function () { return view('repositorio.repositorio'); })->name('repositorio');
-
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
 
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
@@ -104,6 +102,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 });
 
     Route::get('/admin/disciplinas', function () { return view('admin.disciplinas'); })->name('disciplinas');
+    
     Route::post('/admin/disciplinas', [DisciplinasController::class, 'store'])->name('cadastro_disciplina');
 
 Route::group(['middleware' => 'auth'], function() {
