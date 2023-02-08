@@ -1,7 +1,7 @@
 /* fonts import */
 @import url("../fonts/octin_sports_rg.ttf");
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Poppins", sans-serif;
   color: #0c0c0c;
   /* background-color: #ffffff; */
   overflow-x: hidden;
@@ -68,7 +68,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-
 }
 
 .sub_page .hero_area {
@@ -245,6 +244,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          border-radius:20px;
 }
 
 .slider_section .slider_bg_box .bg_img_box img {
@@ -933,5 +933,54 @@ a:focus {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 6px rgba(0, 0, 0, 0.19);
 }
 
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
 
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 55px;
+  transform: scale(1.5);
+
+}
+
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: indigo;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+
+.quem_somos{border-radius: 50px; color: #f7fafb;
+    box-shadow:rgb(101, 2, 101);
+}  
 /*# sourceMappingURL=style.css.map */

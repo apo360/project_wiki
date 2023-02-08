@@ -1,0 +1,4 @@
+[01-Oct-2022 17:28:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/pacaao/public_html/plataforma_academica/app/Models/User.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/pacaao/public_html/plataforma_academica/app/Models/User.php on line 13

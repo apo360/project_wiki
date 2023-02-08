@@ -1550,7 +1550,7 @@ pre {
   background-color: #f5f5f5; }
 
 .table-hover .table-active:hover {
-  background-color: cyan; }
+  background-color: ; }
   .table-hover .table-active:hover > td,
   .table-hover .table-active:hover > th {
     background-color: #e8e8e8; }
@@ -7231,7 +7231,7 @@ ol > li:before {
   margin: 0;
   padding: 10px 30px 10px 0;
   font-size: 1.125em;
-  /* cursor: pointer; */ } 
+  cursor: pointer; }
 
 .properties-search-filter .toggle-title:after {
   display: block;
@@ -7245,15 +7245,13 @@ ol > li:before {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* content: "\f077";  */
-}
+  content: "\f077"; }
 
 .properties-search-filter .toggle-content {
   padding-bottom: 10px; }
 
 .properties-search-filter .closed .toggle-title:after {
-  /* content: "\f078";  */
-}
+  content: "\f078"; }
 
 .properties-search-filter .slider-range-container .slider-range {
   cursor: pointer; }
@@ -7604,8 +7602,7 @@ ol > li:before {
   margin: 0;
   padding: 10px 30px 10px 0;
   font-size: 1.125em;
-  /* cursor: pointer;  */
-}
+  cursor: pointer; }
 
 .property-location-details .toggle-title:after {
   display: block;
@@ -7619,8 +7616,7 @@ ol > li:before {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\f077"; 
-}
+  content: "\f077"; }
 
 .property-location-details .toggle-content {
   padding-bottom: 10px; }
@@ -9063,7 +9059,7 @@ ol > li:before {
     ACCORDION CONTAINER
 ------------------------------------------------------------------------- */
 .accordion-item.active .accordion-toggle {
-  background-color: cyan; }
+  background-color: ; }
 
 .accordion-item-inner {
   border-color: #e6e6e6; }
@@ -9492,7 +9488,7 @@ ol > li:before {
 
 .banner-search .select-box .select-clone > li:hover {
   color: #FFF;
-  background-color: #082640; }
+  background-color: ##082640; }
 
 /* -----------------------------------------------------------------------------
 

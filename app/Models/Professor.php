@@ -11,5 +11,10 @@ class Professor extends Model
 
    protected $fillable = [
         'formacao_academica',
+        'descricao',
+        'reputacao',
+        'fk_grau_academico',
+        'isonline',
+        'curriculum',
    ];
 }

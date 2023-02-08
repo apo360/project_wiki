@@ -1,220 +1,321 @@
 
-<style>
-
-    section.dispclinas{
-        background-color: #F6F9FF;
-        justify-content: center;
-        color: #434343;
-        width: 100%;
-    }
-
-    section.dispclinas .cards_disp, .localidades{
-        margin-right: 350px;
-        margin-left: 350px;
-        background-color: #ddd;
-        padding-bottom: 38px;
-        margin-bottom: 10px;
-    }
-
-    section.dispclinas form{
-        margin-bottom: 5px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    section.dispclinas label{
-        margin-top: 20px;
-        font-size: 20px;
-        color: #434343;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-    }
-
-    section.dispclinas input{
-        border-radius: 8px;
-        margin-bottom: 15px;
-        background: transparent;
-    }
-
-    .row{
-        gap: 0;
-        margin-top: 20px;
-        margin-bottom: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-</style>
-
-<section class="container">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     
-    <div class="">
-        <form action="" method="post">
-            <label for="procurar">Pesquise as disciplinas.</label>
-            <input id="procurar" class="input_search_disp form-control" type="text" name="procurar" placeholder = "Insira a disciplina desejada" autofocus list="list_disciplina"/>
-            <datalist id="list_disciplina" class="resultado_nome_cliente">
-                @foreach($disciplina as $discip)
-                    <option value="{{ $discip->descricao }}" label="{{ $discip->descricao }}">
-                @endforeach
-            </datalist>
-        </form>
-
-        <div class="">
-            <div class="row">
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Matemática</div>
-                        <div class="card-body">
-                            <img src="images/mat.png" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Matemática" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Francês</div>
-                        <div class="card-body">
-                            <img src="images/frances.png" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Francês" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Inglês</div>
-                        <div class="card-body">
-                            <img src="images/Ingles.jpg" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Inglês" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Informática</div>
-                        <div class="card-body">
-                            <img src="images/info.png" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Informática" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Programação</div>
-                        <div class="card-body">
-                            <img src="images/programacao.jpg" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Programação" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Química</div>
-                        <div class="card-body">
-                            <img src="images/quimica.png" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Química" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Física</div>
-                        <div class="card-body">
-                            <img src="images/fisi.png" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Física" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card card-dark">
-                        <div class="card-header">Estudo do meio</div>
-                        <div class="card-body">
-                            <img src="images/mat.png" alt="" style="width: 1080px; height: 270px;">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Estudo do meio" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="">
-        <form action="" method="post">
-            <label for="localidade">Encontre o explicador mais próximo de si.</label>
-            <input id="localidade" class="input_search_localidade" type="text" name="localidade" placeholder = "Insira a disciplina desejada" autofocus list="list_disciplina"/>
-            <datalist id="list_disciplina" class="resultado_nome_cliente">
-                @foreach($disciplina as $discip)
-                    <option value="{{ $discip->descricao }}" label="{{ $discip->descricao }}">
-                @endforeach
-            </datalist>
-        </form>
-
-        <div class="body-cidade">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card card-dark">
-                        <div class="card-header">Luanda</div>
-                        <div class="card-body">
-                            <img src="images/luanda.webp" alt="">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Luanda" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card card-dark">
-                        <div class="card-header">Lobito</div>
-                        <div class="card-body">
-                            <img src="images/luanda.webp" alt="">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Lobito" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card card-dark">
-                        <div class="card-header">Soyo</div>
-                        <div class="card-body">
-                            <img src="images/luanda.webp" alt="">
-                        </div>
-                        <div class="card-footer">
-                            <a href="explicacoes/Soyo" class="btn btn-primary">Explore Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE-edge" />
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+        <!-- Mobile Metas -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- Site Metas -->
+        <link rel="icon" href="images/favicon.png" type="image/gif" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
     
-</section>
+        <title>{{ config('app.name', 'Plataforma Académica') }}</title>
+        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+    
+        <!-- owl carousel -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+
+        <style>
+        
+            .container{
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+            
+            .card{
+                width: 300px;
+                height: 460px;
+                margin: 25px;
+                background-color: #fff;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+                transition: 0.3s;
+            }
+            
+            .card-header{
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+            }
+            
+            .card-img{
+                min-width: 100%;
+                width: auto;
+                height: 100%;
+            }
+            
+            .card-body{
+                height: 120px;
+                padding: 15px;
+                text-align: center;
+                font-family: sans-serif;
+            }
+            
+            .card-title{
+                font-size: 32px;
+                margin: 15px 0;
+            }
+            
+            .card-texto{
+                font-size: 12px;
+                width: 250px;
+                margin: 0 auto;
+            }
+            
+            .card-footer{
+                margin-top: 10px;
+                text-align: center;
+                background-color: #000;
+            }
+            
+            .card-footer a{
+                color: #fff;
+                display: block;
+                padding: 16px;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+            
+            .card:houver{
+                transform: scaled3d(1.1, 1.1, 1);
+            }
+            
+            /* First Mobile e tablet*/
+            @media screen and (max-width: 767px){
+                
+                body{
+                    background-color: #F6F9FF;
+                }
+                .pesq_form{
+                    position: fixed;
+                    background-color: #000;
+                    z-index: 1;
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                
+                .pesq_form form{
+                    gap: 3rem;
+                    margin: 10px auto;
+                }
+                
+                .pesq_form span i{
+                    width: 18px;
+                    height: auto;
+                    height: 24px;
+                    border-radius: 0px;
+                    
+                }
+                
+                .contt{
+                    padding-top: 80px;
+                }
+                
+                .pesq_form .input-group-prepend .input-group{
+                     border-radius: 0px;
+                }
+            }
+            
+            /* Second Desktop Display*/
+            @media screen and (min-width: 767px){
+                .pesq_form{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <!-- Inicio do Header (Cabeçalho e Menu) -->
+        <header class=""> 
+          <!-- fixed-top -->
+          <!-- header section strats -->
+          @include('layouts.menu_principal')
+          <!-- end header section -->
+        </header>
+        <!-- Fim do Header (Cabeçalho e Menu) -->
+        
+        <div class = "pesq_form">
+            <form role="search" method = "get" action = "{{ route('search') }}">
+                <div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-search"></i></span>
+					</div>
+                    <input type = "search" aria-label="Search" list = "disp_list" name = "procurar" class = "form-control search2" placeholder = "Pesquisa a Disciplina...">
+                    <datalist id = "disp_list">
+                        @foreach(App\Models\Disciplinas::all() as $discip)
+                            <option value="{{ $discip->descricao }}" label="{{ $discip->descricao }}">
+                        @endforeach
+                    </datalist>
+				</div>
+            </form>
+        </div>
+        
+        <section class="contt" id = "PAGE_CONTENT">
+            <div class = "container">
+                <div class="card card-1">
+                    <div class="card-header">
+                        <img src="images/mat.png" alt=""  class = "card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Matemática</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de mat
+                        </p>
+                    </div>
+                    <div class="card-footer" id="navigation_header">
+                        <a href="explicacoes/Matemática">Explore Mais</a>
+                    </div>
+                </div>
+            
+                <div class="card card-2">
+                    <div class="card-header">
+                        <img src="images/frances.png" alt="" class = "card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Francês</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de Fran
+                        </p>
+                    </div>
+                    <div class="card-footer" id="navigation_header">
+                        <a href="explicacoes/Francês">Explore Mais</a>
+                    </div>
+                </div>
+                
+                <div class="card card-3">
+                    <div class="card-header">
+                        <img src="images/Ingles.jpg" alt="" class = "card-img">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Inglês</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de Ing
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="explicacoes/Inglês">Explore Mais</a>
+                    </div>
+                </div>
+            
+                <div class="card card-4">
+                    <div class="card-header">
+                        <img src="images/info.png" alt="" class = "img_disp">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Informática</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de Inf
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="explicacoes/Informática">Explore Mais</a>
+                    </div>
+                </div>
+                
+                <div class="card card-5">
+                    <div class="card-header">
+                        <img src="images/programacao.png" alt="" class = "img_disp">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Programação</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de Prog
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="explicacoes/Programação">Explore Mais</a>
+                    </div>
+                </div>
+            
+                <div class="card card-6">
+                    <div class="card-header">
+                        <img src="images/quimica.png" alt="" class = "img_disp">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Química</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de Química
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="explicacoes/Química">Explore Mais</a>
+                    </div>
+                </div>
+            
+                <div class="card card-7">
+                    <div class="card-header">
+                        <img src="images/fisi.png" alt="" class = "img_disp">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-titulo">Física</div>
+                        <p class = "card-texto">
+                            Meu texto aqui de Fis
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="explicacoes/Física">Explore Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Inicio do Rodapé (Info para todas as páginas) -->
+        <section class = "">
+          <footer class="footer_section"> 
+            <!-- footer section strats -->
+            @include('layouts.footer')
+            <!-- end footer section -->
+          </footer>
+        </section>
+        <!-- Fim do Rodapé -->
+     
+        <!-- ********************************************************************************************************************************************* -->
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+    
+        <!-- jQery -->
+        <script src="/js/jquery-3.4.1.min.js"></script>
+    
+        <!-- owl carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+        <!-- custom js -->
+        <script src="/js/custom.js"></script>
+    
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+        
+        <script>
+            $(document).ready(function(){
+              $("#navigation_header a").click(function(e){
+                e.preventDefault();
+                var href = $(this).attr('href');
+                $('#PAGE_CONTENT').load(href+"#PAGE_CONTENT");
+              }) 
+            })
+        </script>
+      
+  </body>
+    
+</html>
+
     

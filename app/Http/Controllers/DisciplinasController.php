@@ -43,19 +43,18 @@ class DisciplinasController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
-            'codigo' => ['required', 'string', 'max:25'],
+        $request->validate([
+            'ciclo' => ['required', 'string', 'max:25'],
             'disciplina' => ['required', 'string', 'max:255', 'unique'],
         ]);
  
-        $icons = !$request['icon']=null ? $request['icon']->store('icons') : '';
+        //$icons = !$request['icon']=null ? $request['icon']->store('icons') : '';
     
         Disciplinas::create([
-            'codigo' => $request['codigo'],
+            'ciclo' => $request['ciclo'],
             'descricao' => $request['disciplina'],
-            'icon' => $icons,
-        ]);*/
+        ]);
 
-        return redirect('admin.disciplinas')->with('status', 'Registo Enviado com Sucesso!');
+        return redirect('admin.disciplinas')->with('status', 'Disciplina Cadastrada!');
     }
 }

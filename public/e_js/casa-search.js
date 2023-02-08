@@ -87,10 +87,10 @@
 
                 var self = $(this),
                     slider = self.find('.slider-range'),
-                    max = slider.data('max') ? slider.data('max') : 10000,
-                    step = slider.data('step') ? slider.data('step') : 500,
-                    default_max = slider.data('default-max') ? slider.data('default-max') : 1000,
-                    currency = slider.data('currency') ? slider.data('currency') : 'Kz',
+                    max = slider.data('max') ? slider.data('max') : 2000,
+                    step = slider.data('step') ? slider.data('step') : 100,
+                    default_max = slider.data('default-max') ? slider.data('default-max') : 500,
+                    currency = slider.data('currency') ? slider.data('currency') : '$',
                     input_to = self.find('.range-to');
 
                 input_to.val(default_max + ' ' + currency);
@@ -116,11 +116,11 @@
 
                 var self = $(this),
                     slider = self.find('.slider-range'),
-                    min = slider.data('min') ? slider.data('min') : 500,
-                    max = slider.data('max') ? slider.data('max') : 10000,
-                    step = slider.data('step') ? slider.data('step') : 500,
-                    default_min = slider.data('default-min') ? slider.data('default-min') : 500,
-                    currency = slider.data('currency') ? slider.data('currency') : 'Kz',
+                    min = slider.data('min') ? slider.data('min') : 1,
+                    max = slider.data('max') ? slider.data('max') : 2000,
+                    step = slider.data('step') ? slider.data('step') : 100,
+                    default_min = slider.data('default-min') ? slider.data('default-min') : 0,
+                    currency = slider.data('currency') ? slider.data('currency') : '$',
                     input_to = self.find('.range-to');
 
                 input_to.val(default_min + ' ' + currency);

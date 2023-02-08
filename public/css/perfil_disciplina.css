@@ -1,0 +1,57 @@
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: .938rem;
+  background-color: hsl(174, 100%, 99%);
+  color: hsl(174, 8%, 35%);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============= Display Desktop ============= */
+@media screen and (min-width: 767px) 
+{
+
+}
+
+/* ============= Display Mobile and tablet ============= */
+@media screen and (max-width: 767px) 
+{
+    body{
+        margin: 0;
+    }
+    .header-filter{
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+        padding: 0 5px 0 5px;
+        display: flex;
+    }
+}
+
+
+

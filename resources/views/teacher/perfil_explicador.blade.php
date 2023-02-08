@@ -14,7 +14,7 @@
     @foreach($ProfID as $rowss)
         <p>{{$rowss->name}}</p>
         <p>{{$rowss->surname}}</p>
-        <p>{{$rowss->profile_photo_path}}</p>
+        <p><img src="{{ asset('profile_images/'.$rowss->profile_photo_path) }}" alt="{{ auth()->user()->name }}" class="nav__img"></p>
         <p>{{$rowss->grau_academico}}</p>
         <p>{{$rowss->formacao_academica}}</p>
         <p>{{$rowss->preco}}</p>

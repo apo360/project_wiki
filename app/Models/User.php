@@ -32,6 +32,9 @@ class User extends Authenticatable
         'phone_number',
         'city_id',
         'role_id',
+        'profile_photo_path',
+        'endereco',
+        'nascimento',
         
     ];
 

@@ -3,6 +3,7 @@
 namespace App\Actions\Fortify;
 
 use App\Models\User;
+use App\Models\City;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
@@ -28,15 +29,16 @@ class CreateNewUser implements CreatesNewUsers
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
+        $city_id = City::where('description_city', $input['city'])->get();
+
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'surname' => $input['surname'],
             'password' => Hash::make($input['password']),
-            'phone_number' => $input['phone_number'],
             'role_id' => $input['register_id'],
-            'city_id' => $input['city'],
-            //'gender' => $input['gender'],
+            'city_id' => $city_id[0]->id,
+            
         ]);
     }
 }

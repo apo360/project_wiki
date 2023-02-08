@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg custom_nav-container" style = "background-color: #ddd; padding: 0px;">
       <div class="container-fluid">
           <a class="navbar-brand" href="/" :active="request()->routeIs('/')">
-            <img src="images/favicon.png" alt = "Plataforma Academica" style="width:50px;" class="rounded-pill">
+            <img src="images/logo.png" alt = "Plataforma Academica" style="width:50px;" class="rounded-pill">
           </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -25,9 +25,6 @@
                             <li><a class="dropdown-item" href="{{ route('inscricao') }}">{{__('Inscrição Universitária')}}</a> </li>
                             <!-- <li><a class="dropdown-item" href="/apoio_academico/formacoes">Formações</a></li> -->
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('repositorio') }}" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Biblioteca</a>
@@ -172,9 +169,6 @@
                     <!-- <li><a class="dropdown-item" href="/apoio_academico/formacoes">Formações</a></li> -->
                     <li> <hr class="dropdown-divider"> </li>
                 </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href = "{{ route('repositorio') }}" :active = "request()->routeIs('repositorio')">{{ __('Repositório') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Bibliotecas</a>
